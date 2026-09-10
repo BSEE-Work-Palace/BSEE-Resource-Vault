@@ -1,0 +1,994 @@
+/* =========================================================
+   BSEE RESOURCE VAULT
+   Main Stylesheet
+   ========================================================= */
+
+
+/* =========================
+   RESET
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: #ffffff;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(36, 92, 255, 0.13),
+            transparent 38%
+        ),
+        #050B24;
+
+    line-height: 1.5;
+}
+
+body.modal-open {
+    overflow: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+}
+
+.container {
+    width: min(1120px, 92%);
+    margin: 0 auto;
+}
+
+
+/* =========================
+   COLOR VARIABLES
+   ========================= */
+
+:root {
+
+    --bg-main: #050B24;
+    --bg-secondary: #07113A;
+    --bg-card: #0A1748;
+    --bg-card-dark: #111A35;
+
+    --primary: #1746FF;
+    --primary-light: #4169FF;
+
+    --accent: #38BDF8;
+    --accent-blue: #00A8FF;
+
+    --text-main: #FFFFFF;
+    --text-secondary: #B7C6E8;
+    --text-muted: #8FA3C7;
+
+    --border: #244B9B;
+    --border-soft: rgba(255, 255, 255, 0.08);
+
+    --locked-text: #7E8BA8;
+
+    --radius: 14px;
+
+    --transition: 0.25s ease;
+}
+
+
+/* =========================
+   HEADER
+   ========================= */
+
+.site-header {
+    position: relative;
+    z-index: 10;
+
+    border-bottom: 1px solid var(--border-soft);
+
+    background: rgba(5, 11, 36, 0.86);
+}
+
+.header-inner {
+    min-height: 72px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+/* =========================
+   LOGO
+   ========================= */
+
+.logo {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-link,
+.contact-btn {
+    border: 1px solid var(--border);
+
+    background: transparent;
+
+    color: #ffffff;
+
+    padding: 9px 15px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    transition: var(--transition);
+}
+
+.nav-link:hover,
+.contact-btn:hover {
+    background: var(--primary);
+    border-color: var(--accent);
+
+    transform: translateY(-1px);
+}
+
+.nav-button {
+    cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+    min-height: calc(100vh - 72px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    text-align: center;
+}
+
+.hero-grid {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(65, 105, 255, 0.045) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(65, 105, 255, 0.045) 1px,
+            transparent 1px
+        );
+
+    background-size: 48px 48px;
+
+    pointer-events: none;
+}
+
+.hero::before,
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 320px;
+    height: 320px;
+
+    border-radius: 50%;
+
+    filter: blur(70px);
+
+    pointer-events: none;
+}
+
+.hero::before {
+    top: -180px;
+    left: -120px;
+
+    background: rgba(23, 70, 255, 0.12);
+}
+
+.hero::after {
+    right: -120px;
+    bottom: -180px;
+
+    background: rgba(0, 168, 255, 0.08);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+
+    max-width: 800px;
+    padding: 60px 0;
+}
+
+
+/* =========================
+   EYEBROW
+   ========================= */
+
+.eyebrow {
+    margin-bottom: 16px;
+
+    color: var(--accent);
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================
+   HERO TEXT
+   ========================= */
+
+.hero h1 {
+    margin-bottom: 22px;
+
+    font-size: clamp(44px, 8vw, 80px);
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+}
+
+.hero h1 span {
+    display: block;
+    color: var(--accent);
+}
+
+.hero-subtitle {
+    margin-bottom: 10px;
+
+    color: var(--text-secondary);
+
+    font-size: 19px;
+}
+
+.hero-motto {
+    margin-bottom: 32px;
+
+    color: #6FA8FF;
+
+    font-size: 13px;
+    letter-spacing: 3px;
+}
+
+
+/* =========================
+   PRIMARY BUTTON
+   ========================= */
+
+.primary-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 0 28px;
+
+    border: 1px solid var(--accent);
+
+    border-radius: 9px;
+
+    background: var(--primary);
+
+    font-size: 14px;
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    transition: var(--transition);
+}
+
+.primary-btn:hover {
+    background: var(--primary-light);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px rgba(36, 92, 255, 0.22);
+}
+
+
+/* =========================
+   INTERNAL PAGE
+   ========================= */
+
+.page-main {
+    padding: 70px 0;
+}
+
+.page-heading {
+    max-width: 700px;
+
+    margin: 0 auto 42px;
+
+    text-align: center;
+}
+
+.page-heading h1 {
+    margin-bottom: 10px;
+
+    font-size: clamp(34px, 5vw, 48px);
+
+    line-height: 1.1;
+}
+
+.page-heading p {
+    color: var(--text-muted);
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   RESOURCE GRID
+   ========================= */
+
+.resource-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* =========================
+   RESOURCE CARDS
+   ========================= */
+
+.resource-card {
+    min-height: 290px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 28px 23px;
+
+    background: var(--bg-card);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    transition: var(--transition);
+}
+
+.resource-card:hover {
+    border-color: var(--accent);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 14px 35px rgba(36, 92, 255, 0.17);
+}
+
+
+/* =========================
+   CARD ICON
+   ========================= */
+
+.card-icon,
+.batch-icon,
+.status-icon {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 24px;
+
+    border-radius: 10px;
+
+    color: var(--accent);
+
+    background:
+        rgba(23, 70, 255, 0.12);
+
+    border: 1px solid
+        rgba(56, 189, 248, 0.20);
+}
+
+.card-icon svg,
+.batch-icon svg,
+.status-icon svg {
+    width: 25px;
+    height: 25px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.7;
+
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* =========================
+   CARD TEXT
+   ========================= */
+
+.resource-card h2 {
+    margin-bottom: 11px;
+
+    font-size: 21px;
+
+    line-height: 1.25;
+}
+
+.resource-card p {
+    color: var(--text-muted);
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.card-action {
+    color: var(--accent);
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================
+   SEMESTER GRID
+   ========================= */
+
+.semester-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* =========================
+   SEMESTER CARD
+   ========================= */
+
+.semester-card {
+    min-height: 205px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 24px;
+
+    border-radius: var(--radius);
+
+    transition: var(--transition);
+}
+
+.semester-card.unlocked {
+    background: var(--bg-card);
+
+    border:
+        1px solid var(--primary-light);
+
+    box-shadow:
+        0 8px 24px
+        rgba(36, 92, 255, 0.07);
+}
+
+.semester-card.unlocked:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--accent);
+
+    box-shadow:
+        0 14px 35px
+        rgba(36, 92, 255, 0.20);
+}
+
+.semester-card.locked {
+    background: var(--bg-card-dark);
+
+    border:
+        1px solid #29395E;
+
+    color: var(--locked-text);
+
+    cursor: not-allowed;
+
+    opacity: 0.78;
+}
+
+
+/* =========================
+   SEMESTER ICON
+   ========================= */
+
+.status-icon {
+    width: 42px;
+    height: 42px;
+
+    margin-bottom: 8px;
+
+    color: var(--accent);
+}
+
+.locked .status-icon {
+    color: #6C7893;
+}
+
+
+/* =========================
+   SEMESTER NUMBER
+   ========================= */
+
+.semester-number {
+    margin-bottom: 4px;
+
+    font-size: 30px;
+    font-weight: 800;
+}
+
+.semester-card h2 {
+    margin-bottom: 7px;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   STATUS
+   ========================= */
+
+.status {
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.3px;
+}
+
+.available {
+    color: var(--accent);
+}
+
+.locked-status {
+    color: #7986A2;
+}
+
+.coming-soon {
+    margin-top: 5px;
+
+    font-size: 12px;
+
+    color: #687592;
+}
+
+
+/* =========================
+   BATCH GRID
+   ========================= */
+
+.batch-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* =========================
+   BATCH CARD
+   ========================= */
+
+.batch-card {
+    min-height: 245px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 28px;
+
+    background: var(--bg-card);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    transition: var(--transition);
+}
+
+.batch-card:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--accent);
+
+    box-shadow:
+        0 14px 35px
+        rgba(36, 92, 255, 0.18);
+}
+
+.batch-icon {
+    width: 56px;
+    height: 56px;
+
+    margin-bottom: 18px;
+
+    color: var(--accent);
+
+    border-radius: 12px;
+
+    background:
+        rgba(23, 70, 255, 0.12);
+
+    border:
+        1px solid
+        rgba(56, 189, 248, 0.18);
+}
+
+.batch-card h2 {
+    margin-bottom: 6px;
+
+    font-size: 22px;
+}
+
+.batch-card p {
+    margin-bottom: 18px;
+
+    color: var(--text-muted);
+
+    font-size: 14px;
+}
+
+.batch-card > span {
+    color: var(--accent);
+
+    font-size: 13px;
+
+    font-weight: 800;
+}
+
+
+/* =========================
+   CONTACT MODAL
+   ========================= */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 999;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(0, 0, 0, 0.76);
+}
+
+.modal-box {
+    position: relative;
+
+    z-index: 1;
+
+    width: min(470px, 100%);
+
+    padding: 30px;
+
+    background: #0B1433;
+
+    border:
+        1px solid var(--primary-light);
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0, 0, 0, 0.45);
+}
+
+.modal-box h2 {
+    margin-bottom: 20px;
+
+    text-align: center;
+
+    font-size: 21px;
+}
+
+.modal-close {
+    position: absolute;
+
+    top: 10px;
+    right: 14px;
+
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    border-radius: 7px;
+
+    transition: var(--transition);
+}
+
+.modal-close:hover {
+    background:
+        rgba(255, 255, 255, 0.08);
+}
+
+.contact-item {
+    padding: 17px 0;
+
+    text-align: center;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.08);
+}
+
+.contact-item:first-child {
+    border-top: none;
+}
+
+.contact-item h3 {
+    margin-bottom: 6px;
+
+    font-size: 15px;
+}
+
+.contact-item a {
+    color: #5DA7FF;
+
+    font-size: 14px;
+
+    transition: var(--transition);
+}
+
+.contact-item a:hover {
+    color: var(--accent);
+}
+
+
+/* =========================
+   FOCUS STATES
+   ========================= */
+
+a:focus-visible,
+button:focus-visible {
+    outline:
+        2px solid var(--accent);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 950px) {
+
+    .resource-grid,
+    .semester-grid,
+    .batch-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 620px) {
+
+    .container {
+        width: min(92%, 500px);
+    }
+
+    .header-inner {
+        min-height: 64px;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+
+    .header-nav {
+        gap: 5px;
+    }
+
+    .nav-link,
+    .contact-btn {
+        padding: 8px 10px;
+
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height:
+            calc(100vh - 64px);
+    }
+
+    .hero-content {
+        padding: 40px 0;
+    }
+
+    .hero h1 {
+        font-size: clamp(40px, 12vw, 58px);
+
+        letter-spacing: -1px;
+    }
+
+    .hero-subtitle {
+        font-size: 16px;
+    }
+
+    .hero-motto {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .page-main {
+        padding: 45px 0;
+    }
+
+    .page-heading {
+        margin-bottom: 30px;
+    }
+
+    .page-heading h1 {
+        font-size: 34px;
+    }
+
+    .resource-grid,
+    .semester-grid,
+    .batch-grid {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+    .resource-card {
+        min-height: 230px;
+    }
+
+    .semester-card {
+        min-height: 180px;
+    }
+
+    .batch-card {
+        min-height: 210px;
+    }
+
+    .modal-box {
+        padding: 26px 20px;
+    }
+
+}
+
+
+/* =========================
+   REDUCED MOTION
+   ========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        transition-duration:
+            0.01ms !important;
+
+        animation-duration:
+            0.01ms !important;
+    }
+
+}

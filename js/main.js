@@ -1,6 +1,6 @@
 /* =========================================================
    BSEE RESOURCE VAULT
-   Main JavaScript
+   MAIN JAVASCRIPT
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -8,25 +8,30 @@ document.addEventListener("DOMContentLoaded", function () {
     const modal =
         document.getElementById("contactModal");
 
-    const openButtons =
-        document.querySelectorAll("[data-contact-open]");
-
-    const closeButtons =
-        document.querySelectorAll("[data-contact-close]");
-
-
     /*
-     * If the current page has no contact modal,
-     * stop here.
+     * Some pages may not contain
+     * the contact modal.
      */
     if (!modal) {
         return;
     }
 
 
+    const openButtons =
+        document.querySelectorAll(
+            "[data-contact-open]"
+        );
+
+
+    const closeButtons =
+        document.querySelectorAll(
+            "[data-contact-close]"
+        );
+
+
     /* =========================
-       OPEN MODAL
-       ========================= */
+       OPEN CONTACT
+    ========================== */
 
     function openContact() {
 
@@ -51,8 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =========================
-       CLOSE MODAL
-       ========================= */
+       CLOSE CONTACT
+    ========================== */
 
     function closeContact() {
 
@@ -71,35 +76,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* =========================
        OPEN BUTTONS
-       ========================= */
+    ========================== */
 
-    openButtons.forEach(function (button) {
+    openButtons.forEach(
+        function (button) {
 
-        button.addEventListener(
-            "click",
-            openContact
-        );
+            button.addEventListener(
+                "click",
+                openContact
+            );
 
-    });
+        }
+    );
 
 
     /* =========================
        CLOSE BUTTONS
-       ========================= */
+    ========================== */
 
-    closeButtons.forEach(function (button) {
+    closeButtons.forEach(
+        function (button) {
 
-        button.addEventListener(
-            "click",
-            closeContact
-        );
+            button.addEventListener(
+                "click",
+                closeContact
+            );
 
-    });
+        }
+    );
 
 
     /* =========================
        ESCAPE KEY
-       ========================= */
+    ========================== */
 
     document.addEventListener(
         "keydown",
@@ -109,7 +118,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 event.key === "Escape" &&
                 modal.classList.contains("show")
             ) {
+
                 closeContact();
+
             }
 
         }

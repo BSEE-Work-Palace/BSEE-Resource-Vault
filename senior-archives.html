@@ -1,404 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Senior Batches Archives | BSEE Resource Vault</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+    <title>Senior Batches | BSEE Resource Vault</title>
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background:
-                radial-gradient(circle at 50% 0%, rgba(23,70,255,0.12), transparent 35%),
-                #050B24;
-            color: white;
-            min-height: 100vh;
-        }
+    <meta
+        name="description"
+        content="Senior batch archives for BSEE students"
+    >
 
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
+    <link rel="stylesheet" href="css/style.css">
 
-        .container {
-            width: min(1100px, 92%);
-            margin: auto;
-        }
-
-        header {
-            padding: 20px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-        }
-
-        .nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 19px;
-            font-weight: 800;
-        }
-
-        .logo span {
-            color: #38BDF8;
-        }
-
-        .nav-right {
-            display: flex;
-            gap: 8px;
-        }
-
-        .nav-btn {
-            border: 1px solid #245CFF;
-            background: transparent;
-            color: white;
-            padding: 9px 14px;
-            border-radius: 7px;
-            cursor: pointer;
-        }
-
-        .nav-btn:hover {
-            background: #1746FF;
-        }
-
-        main {
-            padding: 60px 0;
-        }
-
-        .page-title {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .page-title h1 {
-            font-size: 42px;
-            margin-bottom: 10px;
-        }
-
-        .page-title p {
-            color: #8FA3C7;
-        }
-
-        .batch-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-
-        .batch-card {
-            min-height: 240px;
-            background: #0A1748;
-            border: 1px solid #244B9B;
-            border-radius: 14px;
-            padding: 28px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            transition: 0.25s ease;
-        }
-
-        .batch-card:hover {
-            transform: translateY(-4px);
-            border-color: #38BDF8;
-            box-shadow: 0 15px 40px rgba(36,92,255,0.18);
-        }
-
-        .folder-icon {
-            font-size: 45px;
-            margin-bottom: 18px;
-        }
-
-        .batch-card h2 {
-            font-size: 23px;
-            margin-bottom: 8px;
-        }
-
-        .batch-card p {
-            color: #9DB0D5;
-            font-size: 14px;
-            margin-bottom: 20px;
-        }
-
-        .open-drive {
-            color: #38BDF8;
-            font-size: 13px;
-            font-weight: 700;
-        }
-
-        /* MODAL */
-        .modal {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.72);
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            z-index: 999;
-        }
-
-        .modal.show {
-            display: flex;
-        }
-
-        .modal-box {
-            width: min(470px,100%);
-            background: #0B1433;
-            border: 1px solid #245CFF;
-            border-radius: 14px;
-            padding: 30px;
-            position: relative;
-        }
-
-        .close-btn {
-            position: absolute;
-            right: 15px;
-            top: 12px;
-            border: none;
-            background: transparent;
-            color: white;
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        .modal-title {
-            text-align: center;
-            font-size: 22px;
-            margin-bottom: 22px;
-        }
-
-        .contact-item {
-            text-align: center;
-            padding: 16px 0;
-            border-top: 1px solid rgba(255,255,255,0.08);
-        }
-
-        .contact-name {
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-
-        .contact-email {
-            color: #5DA7FF;
-            font-size: 14px;
-        }
-
-        @media (max-width: 900px) {
-            .batch-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-
-        @media (max-width: 600px) {
-            .batch-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .page-title h1 {
-                font-size: 32px;
-            }
-        }
-    </style>
 </head>
 
 <body>
 
-<header>
-    <div class="container nav">
 
-        <a href="index.html" class="logo">
-            BSEE <span>RESOURCE VAULT</span>
-        </a>
+    <!-- =========================
+         HEADER
+    ========================== -->
 
-        <div class="nav-right">
+    <header class="site-header">
 
-            <a href="resources.html" class="nav-btn">
-                ← Back
+        <div class="container header-inner">
+
+            <a href="index.html" class="brand">
+
+                <span class="brand-icon">
+
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M13.1 2 5 13h5.4L9.8 22 19 9h-5.7z"/>
+                    </svg>
+
+                </span>
+
+                <span class="brand-text">
+                    BSEE
+                    <strong>RESOURCE VAULT</strong>
+                </span>
+
             </a>
 
-            <a href="index.html" class="nav-btn">
-                Home
-            </a>
 
-            <button class="nav-btn" onclick="openContact()">
-                Contact
+            <nav class="header-nav">
+
+                <a
+                    href="resources.html"
+                    class="nav-btn"
+                >
+                    ← Back
+                </a>
+
+                <a
+                    href="index.html"
+                    class="nav-btn"
+                >
+                    Home
+                </a>
+
+                <button
+                    class="nav-btn"
+                    type="button"
+                    data-contact-open
+                >
+                    Contact
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN
+    ========================== -->
+
+    <main class="page-main">
+
+        <div class="container">
+
+
+            <section class="page-heading">
+
+                <div class="section-line"></div>
+
+                <h1>
+                    Senior Batches Archives
+                </h1>
+
+                <div class="section-line"></div>
+
+            </section>
+
+
+            <!-- =========================
+                 BATCH GRID
+            ========================== -->
+
+            <section class="batch-grid">
+
+
+                <!-- 21 - 25 -->
+
+                <a
+                    href="https://drive.google.com/drive/folders/1xJ70GVUB_wMJm5U-GAJUQ9hj6VqIRTBv"
+                    class="batch-card"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <div class="batch-icon">
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                            <path
+                                d="M3 7h5l2 2h11v10a2 2 0 0 1-2 2H3z"
+                            />
+
+                            <path
+                                d="M3 7V5a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v2"
+                            />
+
+                        </svg>
+
+                    </div>
+
+                    <span class="batch-year">
+                        21 - 25
+                    </span>
+
+                    <h2>
+                        Batch
+                    </h2>
+
+                    <span class="batch-action">
+                        OPEN ARCHIVE →
+                    </span>
+
+                </a>
+
+
+                <!-- 22 - 26 -->
+
+                <a
+                    href="https://eeworkpalace.github.io/EE_Work_Palace/"
+                    class="batch-card"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <div class="batch-icon">
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                            <path
+                                d="M3 7h5l2 2h11v10a2 2 0 0 1-2 2H3z"
+                            />
+
+                            <path
+                                d="M3 7V5a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v2"
+                            />
+
+                        </svg>
+
+                    </div>
+
+                    <span class="batch-year">
+                        22 - 26
+                    </span>
+
+                    <h2>
+                        Batch
+                    </h2>
+
+                    <span class="batch-action">
+                        OPEN ARCHIVE →
+                    </span>
+
+                </a>
+
+
+                <!-- 23 - 27 -->
+
+                <a
+                    href="https://drive.google.com/drive/folders/1cPg3tPMORB7QGcwdPHdCjMfUwgp34kc2"
+                    class="batch-card"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <div class="batch-icon">
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                            <path
+                                d="M3 7h5l2 2h11v10a2 2 0 0 1-2 2H3z"
+                            />
+
+                            <path
+                                d="M3 7V5a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v2"
+                            />
+
+                        </svg>
+
+                    </div>
+
+                    <span class="batch-year">
+                        23 - 27
+                    </span>
+
+                    <h2>
+                        Batch
+                    </h2>
+
+                    <span class="batch-action">
+                        OPEN ARCHIVE →
+                    </span>
+
+                </a>
+
+
+                <!-- 24 - 28 -->
+
+                <a
+                    href="https://drive.google.com/drive/folders/1bSbmzMlaidsJqDkbiDuRxRSkCspu3ecf2"
+                    class="batch-card"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <div class="batch-icon">
+
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                            <path
+                                d="M3 7h5l2 2h11v10a2 2 0 0 1-2 2H3z"
+                            />
+
+                            <path
+                                d="M3 7V5a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v2"
+                            />
+
+                        </svg>
+
+                    </div>
+
+                    <span class="batch-year">
+                        24 - 28
+                    </span>
+
+                    <h2>
+                        Batch
+                    </h2>
+
+                    <span class="batch-action">
+                        OPEN ARCHIVE →
+                    </span>
+
+                </a>
+
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         CONTACT MODAL
+    ========================== -->
+
+    <div
+        class="modal"
+        id="contactModal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="modal-overlay"
+            data-contact-close
+        ></div>
+
+
+        <div
+            class="modal-box"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="contactTitle"
+        >
+
+            <button
+                class="modal-close"
+                type="button"
+                aria-label="Close contact window"
+                data-contact-close
+            >
+                &times;
             </button>
 
+
+            <div class="modal-heading-icon">
+
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+
+                    <path d="M4 4h16v16H4z"/>
+
+                    <path d="m4 6 8 6 8-6"/>
+
+                </svg>
+
+            </div>
+
+
+            <h2 id="contactTitle">
+                For Help Contact
+            </h2>
+
+
+            <div class="contact-list">
+
+                <div class="contact-item">
+
+                    <h3>
+                        Muhammad Uzair
+                    </h3>
+
+                    <a
+                        href="mailto:muhduzair0179@gmail.com"
+                    >
+                        muhduzair0179@gmail.com
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <h3>
+                        Asad Javed
+                    </h3>
+
+                    <a
+                        href="mailto:javedasad002@gmail.com"
+                    >
+                        javedasad002@gmail.com
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <h3>
+                        Aqsa Noor
+                    </h3>
+
+                    <a
+                        href="mailto:aqsa36noor36@gmail.com"
+                    >
+                        aqsa36noor36@gmail.com
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
 
     </div>
-</header>
 
-<main>
-    <div class="container">
 
-        <section class="page-title">
-            <h1>Senior Batches Archives</h1>
-            <p>Select a batch to access archived resources</p>
-        </section>
-
-        <section class="batch-grid">
-
-            <!-- 21 - 25 -->
-            <a class="batch-card"
-               href="https://drive.google.com/drive/folders/1xJ70GVUB_wMJm5U-GAJUQ9hj6VqIRTBv"
-               target="_blank"
-               rel="noopener noreferrer">
-
-                <div class="folder-icon">📁</div>
-
-                <h2>21 - 25</h2>
-
-                <p>
-                    Batch Archive
-                </p>
-
-                <div class="open-drive">
-                    OPEN ARCHIVE →
-                </div>
-
-            </a>
-
-            <!-- 22 - 26 -->
-            <a class="batch-card"
-               href="https://eeworkpalace.github.io/EE_Work_Palace/"
-               target="_blank"
-               rel="noopener noreferrer">
-
-                <div class="folder-icon">📁</div>
-
-                <h2>22 - 26</h2>
-
-                <p>
-                    Batch Archive
-                </p>
-
-                <div class="open-drive">
-                    OPEN ARCHIVE →
-                </div>
-
-            </a>
-
-            <!-- 23 - 27 -->
-            <a class="batch-card"
-               href="https://drive.google.com/drive/folders/1cPg3tPMORB7QGcwdPHdCjMfUwgp34kc2"
-               target="_blank"
-               rel="noopener noreferrer">
-
-                <div class="folder-icon">📁</div>
-
-                <h2>23 - 27</h2>
-
-                <p>
-                    Batch Archive
-                </p>
-
-                <div class="open-drive">
-                    OPEN ARCHIVE →
-                </div>
-
-            </a>
-
-            <!-- 24 - 28 -->
-            <a class="batch-card"
-               href="https://drive.google.com/drive/folders/1bSbmzMlaidsJqDkbiDuRxRSkCspu3ecf2"
-               target="_blank"
-               rel="noopener noreferrer">
-
-                <div class="folder-icon">📁</div>
-
-                <h2>24 - 28</h2>
-
-                <p>
-                    Batch Archive
-                </p>
-
-                <div class="open-drive">
-                    OPEN ARCHIVE →
-                </div>
-
-            </a>
-
-        </section>
-
-    </div>
-</main>
-
-<!-- CONTACT MODAL -->
-<div class="modal" id="contactModal" onclick="closeOutside(event)">
-    <div class="modal-box">
-
-        <button class="close-btn"
-                onclick="closeContact()"
-                aria-label="Close">
-            &times;
-        </button>
-
-        <div class="modal-title">
-            ✉ For Help Contact:
-        </div>
-
-        <div class="contact-item">
-            <div class="contact-name">Muhammad Uzair</div>
-            <a class="contact-email"
-               href="mailto:muhduzair0179@gmail.com">
-                muhduzair0179@gmail.com
-            </a>
-        </div>
-
-        <div class="contact-item">
-            <div class="contact-name">Asad Javed</div>
-            <a class="contact-email"
-               href="mailto:javedasad002@gmail.com">
-                javedasad002@gmail.com
-            </a>
-        </div>
-
-        <div class="contact-item">
-            <div class="contact-name">Aqsa Noor</div>
-            <a class="contact-email"
-               href="mailto:aqsa36noor36@gmail.com">
-                aqsa36noor36@gmail.com
-            </a>
-        </div>
-
-    </div>
-</div>
-
-<script>
-    const modal = document.getElementById("contactModal");
-
-    function openContact() {
-        modal.classList.add("show");
-    }
-
-    function closeContact() {
-        modal.classList.remove("show");
-    }
-
-    function closeOutside(event) {
-        if (event.target === modal) {
-            closeContact();
-        }
-    }
-
-    document.addEventListener("keydown", function(event) {
-        if (event.key === "Escape") {
-            closeContact();
-        }
-    });
-</script>
+    <script src="js/main.js"></script>
 
 </body>
 </html>

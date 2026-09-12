@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
@@ -9,58 +10,83 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>Resources | BSEE Resource Vault</title>
+    <title>BSEE Resource Vault</title>
 
     <meta
         name="description"
-        content="Electrical Engineering resources"
+        content="BSEE Resource Vault - A student-built Electrical Engineering resource platform by BSEE 2025-29."
     >
 
-    <link rel="stylesheet" href="css/style.css">
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
 
 </head>
 
+
 <body>
 
-    <!-- =========================
+    <!-- =====================================================
          HEADER
-    ========================== -->
+    ====================================================== -->
 
     <header class="site-header">
 
         <div class="container header-inner">
 
-            <a href="index.html" class="brand">
+            <!-- BRAND -->
+
+            <a
+                href="index.html"
+                class="brand"
+                aria-label="BSEE Resource Vault Home"
+            >
 
                 <span class="brand-icon">
 
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M13.2 2 5 13h5.4L9.8 22 19 9h-5.7z"/>
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path
+                            d="M13.2 2 5 13h5.4L9.8 22 19 9h-5.7z"
+                        />
                     </svg>
 
                 </span>
 
+
                 <span class="brand-name">
+
                     BSEE
-                    <span>RESOURCE VAULT</span>
+
+                    <span>
+                        RESOURCE VAULT
+                    </span>
+
                 </span>
 
             </a>
 
 
-            <nav class="header-nav">
+            <!-- FIRST PAGE ONLY -->
 
-                <a
-                    href="index.html"
-                    class="header-button"
-                >
-                    Home
-                </a>
+            <nav class="header-nav">
 
                 <button
                     class="header-button"
                     type="button"
-                    data-contact-open
+                    data-modal-open="aboutModal"
+                >
+                    About
+                </button>
+
+
+                <button
+                    class="header-button"
+                    type="button"
+                    data-modal-open="contactModal"
                 >
                     Contact
                 </button>
@@ -72,271 +98,246 @@
     </header>
 
 
-    <!-- =========================
-         MAIN
-    ========================== -->
 
-    <main class="page-main">
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
-        <div class="container">
+    <main class="hero">
 
-            <section class="page-heading">
+        <div class="technical-grid"></div>
 
-                <span class="heading-line"></span>
+        <div class="soft-glow glow-one"></div>
 
-                <h1>
-                    Resources
-                </h1>
-
-                <span class="heading-line"></span>
-
-            </section>
+        <div class="soft-glow glow-two"></div>
 
 
-            <!-- =========================
-                 RESOURCE TILES
-            ========================== -->
-
-            <section class="resource-grid">
+        <div class="container hero-content">
 
 
-                <!-- SEMESTERS -->
+            <!-- LIGHTNING SYMBOL -->
 
-                <a
-                    href="semesters.html"
-                    class="resource-card"
+            <div class="hero-mark">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
                 >
 
-                    <div class="resource-card-top">
+                    <path
+                        d="M13.2 2 5 13h5.4L9.8 22 19 9h-5.7z"
+                    />
 
-                        <div class="resource-icon">
+                </svg>
 
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-
-                                <path
-                                    d="M4 5a2 2 0 0 1 2-2h13v18H6a2 2 0 0 1-2-2z"
-                                />
-
-                                <path d="M4 5v14"/>
-
-                                <path d="M8 7h7"/>
-                                <path d="M8 11h7"/>
-                                <path d="M8 15h5"/>
-
-                            </svg>
-
-                        </div>
-
-                        <span class="card-index">
-                            01
-                        </span>
-
-                    </div>
+            </div>
 
 
-                    <h2>
-                        Semesters
-                    </h2>
+            <!-- SMALL IDENTIFIER -->
+
+            <div class="hero-kicker">
+                BACHELOR OF SCIENCE IN ELECTRICAL ENGINEERING
+            </div>
 
 
-                    <div class="card-action">
+            <!-- MAIN TITLE -->
 
-                        <span>
-                            EXPLORE
-                        </span>
+            <h1>
 
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M5 12h14"/>
-                            <path d="m13 6 6 6-6 6"/>
-                        </svg>
+                Welcome to
 
-                    </div>
+                <span>
+                    BSEE Resource Vault
+                </span>
 
-                </a>
+            </h1>
 
 
-                <!-- PAST PAPERS -->
+            <!-- START -->
 
-                <a
-                    href="https://drive.google.com/drive/folders/184Wg33vlW7vMmpEVoP3cuQS3ZVoE1C-r?usp=sharing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="resource-card"
+            <a
+                href="resources.html"
+                class="primary-button"
+            >
+
+                <span>
+                    GET STARTED
+                </span>
+
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
                 >
 
-                    <div class="resource-card-top">
+                    <path d="M5 12h14"/>
 
-                        <div class="resource-icon">
+                    <path d="m13 6 6 6-6 6"/>
 
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
+                </svg>
 
-                                <path
-                                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
-                                />
+            </a>
 
-                                <path d="M14 2v6h6"/>
-
-                                <path d="M8 13h8"/>
-                                <path d="M8 17h5"/>
-
-                            </svg>
-
-                        </div>
-
-                        <span class="card-index">
-                            02
-                        </span>
-
-                    </div>
-
-
-                    <h2>
-                        Semester 03 Past Papers
-                    </h2>
-
-
-                    <div class="card-action">
-
-                        <span>
-                            OPEN DRIVE
-                        </span>
-
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M5 12h14"/>
-                            <path d="m13 6 6 6-6 6"/>
-                        </svg>
-
-                    </div>
-
-                </a>
-
-
-                <!-- PROJECTS -->
-
-                <a
-                    href="https://drive.google.com/drive/folders/1SdZgBx0YG89SxolfxfnRQVViNIlw67Zc?usp=sharing"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="resource-card"
-                >
-
-                    <div class="resource-card-top">
-
-                        <div class="resource-icon">
-
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-
-                                <path d="m8 9-4 3 4 3"/>
-                                <path d="m16 9 4 3-4 3"/>
-                                <path d="m14 5-4 14"/>
-
-                            </svg>
-
-                        </div>
-
-                        <span class="card-index">
-                            03
-                        </span>
-
-                    </div>
-
-
-                    <h2>
-                        Projects
-                    </h2>
-
-
-                    <div class="card-action">
-
-                        <span>
-                            OPEN DRIVE
-                        </span>
-
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M5 12h14"/>
-                            <path d="m13 6 6 6-6 6"/>
-                        </svg>
-
-                    </div>
-
-                </a>
-
-
-                <!-- SENIOR DRIVES -->
-
-                <a
-                    href="senior-archives.html"
-                    class="resource-card"
-                >
-
-                    <div class="resource-card-top">
-
-                        <div class="resource-icon">
-
-                            <svg
-                                viewBox="0 0 24 24"
-                                aria-hidden="true"
-                            >
-
-                                <path
-                                    d="M3 7h5l2 2h11v10a2 2 0 0 1-2 2H3z"
-                                />
-
-                                <path
-                                    d="M3 7V5a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v2"
-                                />
-
-                            </svg>
-
-                        </div>
-
-                        <span class="card-index">
-                            04
-                        </span>
-
-                    </div>
-
-
-                    <h2>
-                        Senior Drives
-                    </h2>
-
-
-                    <div class="card-action">
-
-                        <span>
-                            EXPLORE
-                        </span>
-
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M5 12h14"/>
-                            <path d="m13 6 6 6-6 6"/>
-                        </svg>
-
-                    </div>
-
-                </a>
-
-
-            </section>
 
         </div>
 
     </main>
 
 
-    <!-- =========================
+
+    <!-- =====================================================
+         ABOUT MODAL
+    ====================================================== -->
+
+    <div
+        class="modal"
+        id="aboutModal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="modal-overlay"
+            data-modal-close="aboutModal"
+        ></div>
+
+
+        <div
+            class="modal-box about-box"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="aboutTitle"
+        >
+
+
+            <!-- CLOSE -->
+
+            <button
+                class="modal-close"
+                type="button"
+                aria-label="Close About"
+                data-modal-close="aboutModal"
+            >
+                ×
+            </button>
+
+
+            <!-- ICON -->
+
+            <div class="modal-icon">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+
+                    <circle
+                        cx="12"
+                        cy="12"
+                        r="9"
+                    />
+
+                    <path
+                        d="M12 10v6"
+                    />
+
+                    <circle
+                        cx="12"
+                        cy="7"
+                        r="0.7"
+                        fill="currentColor"
+                        stroke="none"
+                    />
+
+                </svg>
+
+            </div>
+
+
+            <!-- TITLE -->
+
+            <h2 id="aboutTitle">
+                About BSEE Resource Vault
+            </h2>
+
+
+            <!-- PROFESSIONAL PARAGRAPHS -->
+
+            <div class="about-text">
+
+
+                <p>
+
+                    <strong>BSEE Resource Vault</strong> is a
+                    student-led initiative of the
+                    <strong>BSEE 2025–29 batch</strong>, created
+                    with the purpose of bringing useful Electrical
+                    Engineering resources together in one organized
+                    and accessible platform. The idea behind the
+                    platform is simple: to make academic material
+                    easier to find, easier to access, and more useful
+                    for students throughout their university journey.
+
+                </p>
+
+
+                <p>
+
+                    The platform currently provides access to
+                    semester resources, past papers, projects, and
+                    drives containing material collected from senior
+                    batches. As the BSEE 2025–29 batch progresses
+                    through the degree, the platform will continue
+                    to grow with additional semesters, academic
+                    resources, projects, and material that can help
+                    future students.
+
+                </p>
+
+
+                <p>
+
+                    This platform is more than a collection of links.
+                    It is a small effort by the
+                    <strong>BSEE 2025–29 batch</strong> to create
+                    something useful for the juniors who will follow.
+                    We hope that the resources shared here will help
+                    students save time, prepare better, collaborate
+                    more effectively, and make their academic journey
+                    a little easier.
+
+                </p>
+
+
+                <!-- SIGNATURE -->
+
+                <div class="about-signature">
+
+                    <span>
+                        Built with purpose by
+                    </span>
+
+                    <strong>
+                        BSEE 2025–29
+                    </strong>
+
+                    <small>
+                        More resources. More semesters. More to come.
+                    </small>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
          CONTACT MODAL
-    ========================== -->
+    ====================================================== -->
 
     <div
         class="modal"
@@ -346,7 +347,7 @@
 
         <div
             class="modal-overlay"
-            data-contact-close
+            data-modal-close="contactModal"
         ></div>
 
 
@@ -354,21 +355,30 @@
             class="modal-box"
             role="dialog"
             aria-modal="true"
-            aria-labelledby="contact-title"
+            aria-labelledby="contactTitle"
         >
+
+
+            <!-- CLOSE -->
 
             <button
                 class="modal-close"
                 type="button"
-                data-contact-close
+                aria-label="Close Contact"
+                data-modal-close="contactModal"
             >
                 ×
             </button>
 
 
+            <!-- ICON -->
+
             <div class="modal-icon">
 
-                <svg viewBox="0 0 24 24" aria-hidden="true">
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
 
                     <rect
                         x="4"
@@ -378,49 +388,71 @@
                         rx="2"
                     />
 
-                    <path d="m4 7 8 6 8-6"/>
+                    <path
+                        d="m4 7 8 6 8-6"
+                    />
 
                 </svg>
 
             </div>
 
 
-            <h2 id="contact-title">
+            <!-- TITLE -->
+
+            <h2 id="contactTitle">
                 For Help Contact
             </h2>
 
-        
-<div class="contact-item">
-    <h3>
-        Aqsa Noor
-    </h3>
 
-    <a href="mailto:aqsa36noor36@gmail.com">
-        aqsa36noor36@gmail.com
-    </a>
-</div>
+            <!-- CONTACT LIST -->
+
+            <div class="contact-list">
 
 
-<div class="contact-item">
-    <h3>
-        Muhammad Uzair
-    </h3>
+                <div class="contact-item">
 
-    <a href="mailto:muhduzair0179@gmail.com">
-        muhduzair0179@gmail.com
-    </a>
-</div>
+                    <h3>
+                        Muhammad Uzair
+                    </h3>
+
+                    <a
+                        href="mailto:muhduzair0179@gmail.com"
+                    >
+                        muhduzair0179@gmail.com
+                    </a>
+
+                </div>
 
 
-<div class="contact-item">
-    <h3>
-        Asad Javed
-    </h3>
+                <div class="contact-item">
 
-    <a href="mailto:javedasad002@gmail.com">
-        javedasad002@gmail.com
-    </a>
-</div>
+                    <h3>
+                        Asad Javed
+                    </h3>
+
+                    <a
+                        href="mailto:javedasad002@gmail.com"
+                    >
+                        javedasad002@gmail.com
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <h3>
+                        Aqsa Noor
+                    </h3>
+
+                    <a
+                        href="mailto:aqsa36noor36@gmail.com"
+                    >
+                        aqsa36noor36@gmail.com
+                    </a>
+
+                </div>
+
 
             </div>
 
@@ -429,7 +461,11 @@
     </div>
 
 
+
+    <!-- JAVASCRIPT -->
+
     <script src="js/main.js"></script>
 
 </body>
+
 </html>

@@ -7,112 +7,176 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =====================================================
-       OPEN ANY MODAL
-       ===================================================== */
+       ABOUT MODAL
+       Only exists on index.html
+    ===================================================== */
 
-    const modalOpenButtons =
-        document.querySelectorAll(
-            "[data-modal-open]"
+    const aboutButton =
+        document.getElementById("aboutButton");
+
+    const aboutModal =
+        document.getElementById("aboutModal");
+
+    const aboutClose =
+        document.getElementById("aboutClose");
+
+    const aboutBackdrop =
+        document.getElementById("aboutBackdrop");
+
+
+    function openAbout() {
+
+        if (!aboutModal) {
+            return;
+        }
+
+        aboutModal.classList.add("active");
+
+        aboutModal.setAttribute(
+            "aria-hidden",
+            "false"
         );
 
+        document.body.classList.add(
+            "modal-open"
+        );
+    }
 
-    modalOpenButtons.forEach(function (button) {
 
-        button.addEventListener(
+    function closeAbout() {
+
+        if (!aboutModal) {
+            return;
+        }
+
+        aboutModal.classList.remove("active");
+
+        aboutModal.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        document.body.classList.remove(
+            "modal-open"
+        );
+    }
+
+
+    if (aboutButton) {
+
+        aboutButton.addEventListener(
             "click",
-            function () {
-
-                const modalId =
-                    button.getAttribute(
-                        "data-modal-open"
-                    );
-
-
-                const modal =
-                    document.getElementById(
-                        modalId
-                    );
-
-
-                if (!modal) {
-                    return;
-                }
-
-
-                modal.classList.add(
-                    "show"
-                );
-
-
-                modal.setAttribute(
-                    "aria-hidden",
-                    "false"
-                );
-
-
-                document.body.classList.add(
-                    "modal-open"
-                );
-
-            }
+            openAbout
         );
 
-    });
+    }
+
+
+    if (aboutClose) {
+
+        aboutClose.addEventListener(
+            "click",
+            closeAbout
+        );
+
+    }
+
+
+    if (aboutBackdrop) {
+
+        aboutBackdrop.addEventListener(
+            "click",
+            closeAbout
+        );
+
+    }
 
 
 
     /* =====================================================
-       CLOSE ANY MODAL
+       CONTACT MODAL
+       Exists on all pages
     ===================================================== */
 
-    const modalCloseButtons =
-        document.querySelectorAll(
-            "[data-modal-close]"
+    const contactButton =
+        document.getElementById("contactButton");
+
+    const contactModal =
+        document.getElementById("contactModal");
+
+    const contactClose =
+        document.getElementById("contactClose");
+
+    const contactBackdrop =
+        document.getElementById("contactBackdrop");
+
+
+    function openContact() {
+
+        if (!contactModal) {
+            return;
+        }
+
+        contactModal.classList.add("active");
+
+        contactModal.setAttribute(
+            "aria-hidden",
+            "false"
         );
 
+        document.body.classList.add(
+            "modal-open"
+        );
+    }
 
-    modalCloseButtons.forEach(function (button) {
 
-        button.addEventListener(
+    function closeContact() {
+
+        if (!contactModal) {
+            return;
+        }
+
+        contactModal.classList.remove("active");
+
+        contactModal.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        document.body.classList.remove(
+            "modal-open"
+        );
+    }
+
+
+    if (contactButton) {
+
+        contactButton.addEventListener(
             "click",
-            function () {
-
-                const modalId =
-                    button.getAttribute(
-                        "data-modal-close"
-                    );
-
-
-                const modal =
-                    document.getElementById(
-                        modalId
-                    );
-
-
-                if (!modal) {
-                    return;
-                }
-
-
-                modal.classList.remove(
-                    "show"
-                );
-
-
-                modal.setAttribute(
-                    "aria-hidden",
-                    "true"
-                );
-
-
-                document.body.classList.remove(
-                    "modal-open"
-                );
-
-            }
+            openContact
         );
 
-    });
+    }
+
+
+    if (contactClose) {
+
+        contactClose.addEventListener(
+            "click",
+            closeContact
+        );
+
+    }
+
+
+    if (contactBackdrop) {
+
+        contactBackdrop.addEventListener(
+            "click",
+            closeContact
+        );
+
+    }
 
 
 
@@ -129,74 +193,28 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
 
-            const openModals =
-                document.querySelectorAll(
-                    ".modal.show"
-                );
+            if (
+                aboutModal &&
+                aboutModal.classList.contains("active")
+            ) {
+
+                closeAbout();
+
+                return;
+            }
 
 
-            openModals.forEach(function (modal) {
+            if (
+                contactModal &&
+                contactModal.classList.contains("active")
+            ) {
 
-                modal.classList.remove(
-                    "show"
-                );
+                closeContact();
 
-
-                modal.setAttribute(
-                    "aria-hidden",
-                    "true"
-                );
-
-            });
-
-
-            document.body.classList.remove(
-                "modal-open"
-            );
+            }
 
         }
     );
 
-
-
-    /* =====================================================
-       CLICK OUTSIDE MODAL
-    ===================================================== */
-
-    document.querySelectorAll(
-        ".modal"
-    ).forEach(function (modal) {
-
-        modal.addEventListener(
-            "click",
-            function (event) {
-
-                if (
-                    event.target.classList.contains(
-                        "modal-overlay"
-                    )
-                ) {
-
-                    modal.classList.remove(
-                        "show"
-                    );
-
-
-                    modal.setAttribute(
-                        "aria-hidden",
-                        "true"
-                    );
-
-
-                    document.body.classList.remove(
-                        "modal-open"
-                    );
-
-                }
-
-            }
-        );
-
-    });
 
 });

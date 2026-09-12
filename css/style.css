@@ -1,6 +1,6 @@
 /* =========================================================
    BSEE RESOURCE VAULT
-   PREMIUM LIGHTWEIGHT ULTRAMARINE UI
+   LIGHTWEIGHT PREMIUM UI
    ========================================================= */
 
 
@@ -11,30 +11,28 @@
 :root {
 
     --bg-main: #030817;
-    --bg-deep: #050d22;
+    --bg-secondary: #06102a;
 
-    --card: #091838;
-    --card-dark: #0b142b;
+    --card: #091738;
+    --card-hover: #0c1d45;
 
     --blue: #245cff;
-    --blue-bright: #3978ff;
-
+    --blue-light: #3978ff;
     --cyan: #42c8ff;
 
     --white: #ffffff;
     --text: #edf4ff;
-    --muted: #8fa4c8;
+    --muted: #8da2c7;
 
-    --locked: #65728d;
+    --locked: #65718b;
 
     --border:
         rgba(66, 200, 255, 0.18);
 
     --border-hover:
-        rgba(66, 200, 255, 0.52);
+        rgba(66, 200, 255, 0.55);
 
-    --radius:
-        15px;
+    --radius: 15px;
 
     --transition:
         0.25s cubic-bezier(.2,.7,.2,1);
@@ -46,25 +44,19 @@
    ========================================================= */
 
 * {
-
     margin: 0;
     padding: 0;
 
     box-sizing: border-box;
 }
 
-
 html {
-
-    scroll-behavior:
-        smooth;
+    scroll-behavior: smooth;
 }
-
 
 body {
 
-    min-height:
-        100vh;
+    min-height: 100vh;
 
     font-family:
         Inter,
@@ -72,22 +64,19 @@ body {
         Helvetica,
         sans-serif;
 
-    color:
-        var(--white);
+    color: var(--white);
 
     background:
         radial-gradient(
             circle at 20% 10%,
-            rgba(36,92,255,0.10),
+            rgba(36,92,255,0.11),
             transparent 28%
         ),
-
         radial-gradient(
             circle at 85% 85%,
-            rgba(66,200,255,0.045),
+            rgba(66,200,255,0.055),
             transparent 28%
         ),
-
         linear-gradient(
             135deg,
             #030817,
@@ -102,16 +91,12 @@ body {
         1.5;
 }
 
-
 body.modal-open {
-
     overflow:
         hidden;
 }
 
-
 a {
-
     color:
         inherit;
 
@@ -119,9 +104,7 @@ a {
         none;
 }
 
-
 button {
-
     font:
         inherit;
 }
@@ -145,19 +128,14 @@ body::before {
     pointer-events:
         none;
 
-    z-index:
-        -1;
-
     opacity:
-        0.24;
+        0.27;
 
     background-image:
-
         linear-gradient(
             rgba(66,200,255,0.028) 1px,
             transparent 1px
         ),
-
         linear-gradient(
             90deg,
             rgba(66,200,255,0.028) 1px,
@@ -176,7 +154,7 @@ body::before {
 .container {
 
     width:
-        min(1080px,90%);
+        min(1080px, 91%);
 
     margin:
         0 auto;
@@ -193,13 +171,10 @@ body::before {
         relative;
 
     z-index:
-        100;
-
-    min-height:
-        70px;
+        50;
 
     background:
-        rgba(3,8,23,0.76);
+        rgba(3,8,23,0.72);
 
     border-bottom:
         1px solid
@@ -208,7 +183,6 @@ body::before {
     backdrop-filter:
         blur(12px);
 }
-
 
 .header-inner {
 
@@ -223,9 +197,6 @@ body::before {
 
     justify-content:
         space-between;
-
-    gap:
-        15px;
 }
 
 
@@ -242,9 +213,8 @@ body::before {
         center;
 
     gap:
-        9px;
+        10px;
 }
-
 
 .brand-icon {
 
@@ -267,20 +237,19 @@ body::before {
         var(--cyan);
 
     background:
-        rgba(36,92,255,0.11);
+        rgba(36,92,255,0.13);
 
     border:
         1px solid
-        rgba(66,200,255,0.25);
+        rgba(66,200,255,0.26);
 
     border-radius:
         10px;
 
     box-shadow:
         0 0 18px
-        rgba(36,92,255,0.06);
+        rgba(36,92,255,0.08);
 }
-
 
 .brand-icon svg {
 
@@ -294,7 +263,6 @@ body::before {
         currentColor;
 }
 
-
 .brand-name {
 
     display:
@@ -303,9 +271,6 @@ body::before {
     flex-direction:
         column;
 
-    color:
-        white;
-
     font-size:
         13px;
 
@@ -313,20 +278,19 @@ body::before {
         900;
 
     line-height:
-        1.03;
+        1.05;
 
     letter-spacing:
-        0.8px;
+        0.9px;
 }
 
-
-.brand-name strong {
+.brand-name span {
 
     color:
         var(--cyan);
 
     font-size:
-        9px;
+        10px;
 
     letter-spacing:
         1.1px;
@@ -334,10 +298,11 @@ body::before {
 
 
 /* =========================================================
-   HEADER BUTTONS
+   HEADER ACTIONS
    ========================================================= */
 
-.header-actions {
+.header-actions,
+.header-nav {
 
     display:
         flex;
@@ -346,9 +311,13 @@ body::before {
         center;
 
     gap:
-        6px;
+        7px;
 }
 
+
+/* =========================================================
+   HEADER BUTTON
+   ========================================================= */
 
 .header-button {
 
@@ -365,23 +334,23 @@ body::before {
         center;
 
     padding:
-        0 12px;
+        0 13px;
 
     color:
         var(--text);
 
     background:
-        rgba(9,22,58,0.48);
+        rgba(9,22,58,0.55);
 
     border:
         1px solid
-        rgba(66,200,255,0.13);
+        rgba(66,200,255,0.14);
 
     border-radius:
         8px;
 
     font-size:
-        11px;
+        12px;
 
     cursor:
         pointer;
@@ -390,14 +359,10 @@ body::before {
         var(--transition);
 }
 
-
 .header-button:hover {
 
-    color:
-        white;
-
     background:
-        rgba(36,92,255,0.15);
+        rgba(36,92,255,0.17);
 
     border-color:
         var(--border-hover);
@@ -435,8 +400,7 @@ body::before {
         center;
 }
 
-
-.hero-grid {
+.technical-grid {
 
     position:
         absolute;
@@ -445,15 +409,13 @@ body::before {
         0;
 
     background-image:
-
         linear-gradient(
-            rgba(66,200,255,0.028) 1px,
+            rgba(66,200,255,0.03) 1px,
             transparent 1px
         ),
-
         linear-gradient(
             90deg,
-            rgba(66,200,255,0.028) 1px,
+            rgba(66,200,255,0.03) 1px,
             transparent 1px
         );
 
@@ -461,8 +423,7 @@ body::before {
         56px 56px;
 }
 
-
-.hero-glow {
+.soft-glow {
 
     position:
         absolute;
@@ -471,48 +432,46 @@ body::before {
         50%;
 
     filter:
-        blur(85px);
+        blur(75px);
 
     pointer-events:
         none;
 }
 
-
-.hero-glow-left {
+.glow-one {
 
     width:
-        280px;
+        300px;
 
     height:
-        280px;
+        300px;
 
     top:
-        -120px;
+        -130px;
 
     left:
         -100px;
 
     background:
-        rgba(36,92,255,0.065);
+        rgba(36,92,255,0.08);
 }
 
-
-.hero-glow-right {
+.glow-two {
 
     width:
-        260px;
+        280px;
 
     height:
-        260px;
+        280px;
 
     right:
-        -100px;
+        -110px;
 
     bottom:
-        -120px;
+        -130px;
 
     background:
-        rgba(66,200,255,0.04);
+        rgba(66,200,255,0.055);
 }
 
 
@@ -532,7 +491,7 @@ body::before {
         820px;
 
     padding:
-        55px 0;
+        60px 0;
 }
 
 
@@ -540,16 +499,16 @@ body::before {
    HERO ICON
    ========================================================= */
 
-.hero-icon {
+.hero-mark {
 
     width:
-        68px;
+        70px;
 
     height:
-        68px;
+        70px;
 
     margin:
-        0 auto 22px;
+        0 auto 23px;
 
     display:
         flex;
@@ -566,30 +525,29 @@ body::before {
     background:
         linear-gradient(
             145deg,
-            rgba(36,92,255,0.17),
+            rgba(36,92,255,0.19),
             rgba(7,16,42,0.90)
         );
 
     border:
         1px solid
-        rgba(66,200,255,0.28);
+        rgba(66,200,255,0.35);
 
     border-radius:
-        17px;
+        18px;
 
     box-shadow:
-        0 0 30px
-        rgba(36,92,255,0.07);
+        0 0 32px
+        rgba(36,92,255,0.10);
 }
 
-
-.hero-icon svg {
+.hero-mark svg {
 
     width:
-        35px;
+        37px;
 
     height:
-        35px;
+        37px;
 
     fill:
         currentColor;
@@ -597,25 +555,25 @@ body::before {
 
 
 /* =========================================================
-   HERO LABEL
+   HERO KICKER
    ========================================================= */
 
-.hero-label {
+.hero-kicker {
 
     margin-bottom:
-        14px;
+        15px;
 
     color:
         var(--cyan);
 
     font-size:
-        9px;
+        10px;
 
     font-weight:
         800;
 
     letter-spacing:
-        2px;
+        2.4px;
 }
 
 
@@ -626,24 +584,20 @@ body::before {
 .hero h1 {
 
     margin-bottom:
-        30px;
-
-    color:
-        white;
+        31px;
 
     font-size:
-        clamp(42px,7vw,70px);
-
-    font-weight:
-        900;
+        clamp(42px,7vw,72px);
 
     line-height:
         1;
 
     letter-spacing:
-        -2.6px;
-}
+        -2.5px;
 
+    font-weight:
+        900;
+}
 
 .hero h1 span {
 
@@ -661,7 +615,7 @@ body::before {
             90deg,
             #ffffff,
             #42c8ff,
-            #6583ff
+            #6483ff
         );
 
     background-clip:
@@ -673,13 +627,13 @@ body::before {
 
 
 /* =========================================================
-   START BUTTON
+   PRIMARY BUTTON
    ========================================================= */
 
-.start-button {
+.primary-button {
 
     min-height:
-        48px;
+        49px;
 
     display:
         inline-flex;
@@ -693,11 +647,14 @@ body::before {
     gap:
         9px;
 
-    padding:
-        0 24px;
+    position:
+        relative;
 
-    color:
-        white;
+    overflow:
+        hidden;
+
+    padding:
+        0 25px;
 
     background:
         linear-gradient(
@@ -708,13 +665,16 @@ body::before {
 
     border:
         1px solid
-        rgba(66,200,255,0.48);
+        rgba(66,200,255,0.52);
 
     border-radius:
         9px;
 
+    color:
+        white;
+
     font-size:
-        11px;
+        12px;
 
     font-weight:
         900;
@@ -723,15 +683,14 @@ body::before {
         1px;
 
     box-shadow:
-        0 10px 30px
-        rgba(36,92,255,0.17);
+        0 9px 28px
+        rgba(36,92,255,0.18);
 
     transition:
         var(--transition);
 }
 
-
-.start-button svg {
+.primary-button svg {
 
     width:
         16px;
@@ -755,26 +714,25 @@ body::before {
         round;
 }
 
-
-.start-button:hover {
+.primary-button:hover {
 
     transform:
         translateY(-2px);
 
     box-shadow:
-        0 15px 38px
+        0 13px 34px
         rgba(36,92,255,0.25);
 }
 
 
 /* =========================================================
-   INTERNAL PAGE
+   INTERNAL PAGES
    ========================================================= */
 
 .page-main {
 
     padding:
-        55px 0 70px;
+        58px 0 70px;
 }
 
 
@@ -794,23 +752,22 @@ body::before {
         center;
 
     gap:
-        13px;
+        15px;
 
     margin-bottom:
-        36px;
+        38px;
 }
-
 
 .page-heading h1 {
 
     font-size:
-        clamp(34px,5vw,47px);
-
-    font-weight:
-        900;
+        clamp(34px,5vw,48px);
 
     line-height:
         1;
+
+    font-weight:
+        900;
 
     letter-spacing:
         -1.8px;
@@ -819,11 +776,10 @@ body::before {
         nowrap;
 }
 
-
 .heading-line {
 
     width:
-        40px;
+        42px;
 
     height:
         1px;
@@ -836,9 +792,8 @@ body::before {
         );
 
     opacity:
-        0.33;
+        0.36;
 }
-
 
 .heading-line:last-child {
 
@@ -861,10 +816,10 @@ body::before {
         grid;
 
     grid-template-columns:
-        repeat(4,minmax(0,1fr));
+        repeat(4, minmax(0,1fr));
 
     gap:
-        13px;
+        14px;
 }
 
 
@@ -875,7 +830,7 @@ body::before {
 .resource-card {
 
     min-height:
-        155px;
+        160px;
 
     position:
         relative;
@@ -889,11 +844,18 @@ body::before {
     justify-content:
         space-between;
 
-    padding:
-        18px;
-
     overflow:
         hidden;
+
+    padding:
+        19px;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        15px;
 
     background:
         linear-gradient(
@@ -902,19 +864,11 @@ body::before {
             rgba(5,14,34,0.98)
         );
 
-    border:
-        1px solid
-        var(--border);
-
-    border-radius:
-        14px;
-
     transition:
         var(--transition);
 }
 
-
-.resource-card::after {
+.resource-card::before {
 
     content:
         "";
@@ -922,28 +876,40 @@ body::before {
     position:
         absolute;
 
-    width:
-        100px;
-
-    height:
-        100px;
-
-    right:
-        -55px;
+    left:
+        -110%;
 
     top:
-        -55px;
+        0;
 
-    border-radius:
-        50%;
+    width:
+        75%;
+
+    height:
+        100%;
 
     background:
-        rgba(66,200,255,0.035);
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(66,200,255,0.055),
+            transparent
+        );
+
+    transform:
+        skewX(-20deg);
+
+    transition:
+        0.65s ease;
 
     pointer-events:
         none;
 }
 
+.resource-card:hover::before {
+    left:
+        130%;
+}
 
 .resource-card:hover {
 
@@ -953,17 +919,24 @@ body::before {
     border-color:
         var(--border-hover);
 
+    background:
+        linear-gradient(
+            145deg,
+            rgba(12,29,69,1),
+            rgba(7,17,40,1)
+        );
+
     box-shadow:
         0 14px 32px
-        rgba(36,92,255,0.10);
+        rgba(36,92,255,0.11);
 }
 
 
 /* =========================================================
-   RESOURCE TOP
+   RESOURCE CARD TOP
    ========================================================= */
 
-.resource-top {
+.resource-card-top {
 
     display:
         flex;
@@ -975,14 +948,13 @@ body::before {
         space-between;
 }
 
-
 .resource-icon {
 
     width:
-        42px;
+        43px;
 
     height:
-        42px;
+        43px;
 
     display:
         flex;
@@ -997,27 +969,26 @@ body::before {
         var(--cyan);
 
     background:
-        rgba(36,92,255,0.085);
+        rgba(36,92,255,0.10);
 
     border:
         1px solid
-        rgba(66,200,255,0.17);
+        rgba(66,200,255,0.20);
 
     border-radius:
-        10px;
+        11px;
 
     transition:
         var(--transition);
 }
 
-
 .resource-icon svg {
 
     width:
-        21px;
+        22px;
 
     height:
-        21px;
+        22px;
 
     fill:
         none;
@@ -1035,50 +1006,63 @@ body::before {
         round;
 }
 
-
 .resource-card:hover .resource-icon {
 
     color:
         white;
 
     background:
-        rgba(36,92,255,0.16);
+        rgba(36,92,255,0.18);
+
+    box-shadow:
+        0 0 18px
+        rgba(66,200,255,0.07);
 }
 
-
-.card-number {
+.card-index {
 
     color:
-        rgba(66,200,255,0.29);
+        rgba(66,200,255,0.34);
 
     font-size:
-        9px;
+        10px;
 
     font-weight:
         900;
 
     letter-spacing:
-        1.4px;
+        1.5px;
 }
 
+
+/* =========================================================
+   RESOURCE CARD TITLE
+   ========================================================= */
 
 .resource-card h2 {
 
     max-width:
-        205px;
+        200px;
 
     font-size:
-        16px;
+        17px;
 
     line-height:
-        1.16;
+        1.17;
 
     font-weight:
         850;
+
+    letter-spacing:
+        -0.2px;
 }
 
 
-.resource-action {
+/* =========================================================
+   RESOURCE CARD ACTION
+   ========================================================= */
+
+.card-action {
 
     display:
         flex;
@@ -1093,23 +1077,22 @@ body::before {
         var(--cyan);
 
     font-size:
-        8px;
+        9px;
 
     font-weight:
         900;
 
     letter-spacing:
-        1.1px;
+        1.2px;
 }
 
-
-.resource-action svg {
+.card-action svg {
 
     width:
-        14px;
+        15px;
 
     height:
-        14px;
+        15px;
 
     fill:
         none;
@@ -1125,6 +1108,15 @@ body::before {
 
     stroke-linejoin:
         round;
+
+    transition:
+        var(--transition);
+}
+
+.resource-card:hover .card-action svg {
+
+    transform:
+        translateX(3px);
 }
 
 
@@ -1138,10 +1130,10 @@ body::before {
         grid;
 
     grid-template-columns:
-        repeat(4,minmax(0,1fr));
+        repeat(4, minmax(0,1fr));
 
     gap:
-        13px;
+        14px;
 }
 
 
@@ -1152,7 +1144,7 @@ body::before {
 .semester-card {
 
     min-height:
-        140px;
+        145px;
 
     display:
         flex;
@@ -1166,14 +1158,20 @@ body::before {
     justify-content:
         center;
 
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    padding:
+        17px;
+
     text-align:
         center;
 
-    padding:
-        15px;
-
     border-radius:
-        13px;
+        14px;
 
     transition:
         var(--transition);
@@ -1184,21 +1182,24 @@ body::before {
 
 .semester-card.open {
 
+    color:
+        white;
+
     background:
         linear-gradient(
             145deg,
-            #0a1c48,
-            #07132c
+            #0b1d4a,
+            #07142e
         );
 
     border:
         1px solid
-        rgba(66,200,255,0.21);
+        rgba(66,200,255,0.24);
 
-    color:
-        white;
+    box-shadow:
+        0 7px 22px
+        rgba(36,92,255,0.06);
 }
-
 
 .semester-card.open:hover {
 
@@ -1209,8 +1210,8 @@ body::before {
         var(--border-hover);
 
     box-shadow:
-        0 14px 32px
-        rgba(36,92,255,0.13);
+        0 13px 32px
+        rgba(36,92,255,0.14);
 }
 
 
@@ -1218,22 +1219,22 @@ body::before {
 
 .semester-card.locked {
 
+    color:
+        var(--locked);
+
     background:
         linear-gradient(
             145deg,
-            #10182c,
-            #0b1222
+            #10182d,
+            #0b1224
         );
 
     border:
         1px solid
-        rgba(120,140,180,0.10);
-
-    color:
-        var(--locked);
+        rgba(120,140,180,0.11);
 
     opacity:
-        0.69;
+        0.70;
 
     cursor:
         not-allowed;
@@ -1247,254 +1248,13 @@ body::before {
 .semester-icon {
 
     width:
-        36px;
+        38px;
 
     height:
-        36px;
+        38px;
 
     margin-bottom:
         7px;
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    color:
-        var(--cyan);
-
-    background:
-        rgba(36,92,255,0.07);
-
-    border:
-        1px solid
-        rgba(66,200,255,0.14);
-
-    border-radius:
-        9px;
-}
-
-
-.semester-icon svg {
-
-    width:
-        20px;
-
-    height:
-        20px;
-
-    fill:
-        none;
-
-    stroke:
-        currentColor;
-
-    stroke-width:
-        1.6;
-
-    stroke-linecap:
-        round;
-
-    stroke-linejoin:
-        round;
-}
-
-
-.locked .semester-icon {
-
-    color:
-        #5f6c86;
-
-    background:
-        rgba(100,113,140,0.035);
-
-    border-color:
-        rgba(120,140,180,0.08);
-}
-
-
-/* =========================================================
-   SEMESTER TEXT
-   ========================================================= */
-
-.semester-number {
-
-    font-size:
-        24px;
-
-    line-height:
-        1;
-
-    font-weight:
-        900;
-}
-
-
-.semester-card h2 {
-
-    margin-top:
-        4px;
-
-    font-size:
-        12px;
-
-    font-weight:
-        800;
-}
-
-
-.semester-action {
-
-    margin-top:
-        7px;
-
-    color:
-        var(--cyan);
-
-    font-size:
-        7px;
-
-    font-weight:
-        900;
-
-    letter-spacing:
-        1px;
-}
-
-
-.semester-status {
-
-    margin-top:
-        7px;
-
-    color:
-        #707c94;
-
-    font-size:
-        7px;
-
-    font-weight:
-        900;
-
-    letter-spacing:
-        1.1px;
-}
-
-
-.coming-soon {
-
-    margin-top:
-        3px;
-
-    color:
-        #56627b;
-
-    font-size:
-        7px;
-
-    font-weight:
-        700;
-
-    letter-spacing:
-        0.7px;
-}
-
-
-/* =========================================================
-   SENIOR DRIVE GRID
-   ========================================================= */
-
-.batch-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(4,minmax(0,1fr));
-
-    gap:
-        13px;
-}
-
-
-/* =========================================================
-   SENIOR DRIVE CARD
-   ========================================================= */
-
-.batch-card {
-
-    min-height:
-        160px;
-
-    display:
-        flex;
-
-    flex-direction:
-        column;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    text-align:
-        center;
-
-    padding:
-        17px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #0a1c48,
-            #07132c
-        );
-
-    border:
-        1px solid
-        var(--border);
-
-    border-radius:
-        14px;
-
-    transition:
-        var(--transition);
-}
-
-
-.batch-card:hover {
-
-    transform:
-        translateY(-4px);
-
-    border-color:
-        var(--border-hover);
-
-    box-shadow:
-        0 15px 34px
-        rgba(36,92,255,0.12);
-}
-
-
-/* =========================================================
-   DRIVE ICON
-   ========================================================= */
-
-.drive-icon {
-
-    width:
-        44px;
-
-    height:
-        44px;
-
-    margin-bottom:
-        10px;
 
     display:
         flex;
@@ -1513,23 +1273,574 @@ body::before {
 
     border:
         1px solid
-        rgba(66,200,255,0.17);
+        rgba(66,200,255,0.16);
 
     border-radius:
         10px;
+}
+
+.semester-icon svg {
+
+    width:
+        21px;
+
+    height:
+        21px;
+
+    fill:
+        none;
+
+    stroke:
+        currentColor;
+
+    stroke-width:
+        1.65;
+
+    stroke-linecap:
+        round;
+
+    stroke-linejoin:
+        round;
+}
+
+.locked .semester-icon {
+
+    color:
+        #606d86;
+
+    background:
+        rgba(100,113,140,0.04);
+
+    border-color:
+        rgba(120,140,180,0.10);
+}
+
+
+/* =========================================================
+   SEMESTER TEXT
+   ========================================================= */
+
+.semester-number {
+
+    font-size:
+        25px;
+
+    line-height:
+        1;
+
+    font-weight:
+        900;
+}
+
+.semester-card h2 {
+
+    margin-top:
+        4px;
+
+    font-size:
+        13px;
+
+    font-weight:
+        800;
+}
+
+
+/* =========================================================
+   SEMESTER ACTION
+   ========================================================= */
+
+.semester-action {
+
+    margin-top:
+        7px;
+
+    color:
+        var(--cyan);
+
+    font-size:
+        8px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        1.1px;
+}
+
+
+/* =========================================================
+   LOCKED STATUS
+   ========================================================= */
+
+.semester-status {
+
+    margin-top:
+        7px;
+
+    color:
+        #707d96;
+
+    font-size:
+        8px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        1.3px;
+}
+
+.coming-soon {
+
+    margin-top:
+        3px;
+
+    color:
+        #59657d;
+
+    font-size:
+        8px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.8px;
+}
+
+
+/* =========================================================
+   SENIOR DRIVE GRID
+   ========================================================= */
+
+.batch-grid {
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0,1fr));
+
+    gap:
+        14px;
+}
+
+
+/* =========================================================
+   SENIOR DRIVE CARD
+   ========================================================= */
+
+.batch-card {
+
+    min-height:
+        165px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    padding:
+        18px;
+
+    text-align:
+        center;
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius:
+        15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0a1c48,
+            #07142e
+        );
 
     transition:
         var(--transition);
 }
 
+.batch-card:hover {
+
+    transform:
+        translateY(-4px);
+
+    border-color:
+        var(--border-hover);
+
+    box-shadow:
+        0 15px 35px
+        rgba(36,92,255,0.13);
+}
+
+
+/* =========================================================
+   DRIVE ICON
+   ========================================================= */
+
+.drive-icon {
+
+    width:
+        45px;
+
+    height:
+        45px;
+
+    margin-bottom:
+        11px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    color:
+        var(--cyan);
+
+    background:
+        rgba(36,92,255,0.09);
+
+    border:
+        1px solid
+        rgba(66,200,255,0.18);
+
+    border-radius:
+        11px;
+
+    transition:
+        var(--transition);
+}
 
 .drive-icon svg {
 
     width:
-        23px;
+        24px;
 
     height:
-        23px;
+        24px;
+
+    fill:
+        none;
+
+    stroke:
+        currentColor;
+
+    stroke-width:
+        1.65;
+
+    stroke-linecap:
+        round;
+
+    stroke-linejoin:
+        round;
+}
+
+.batch-card:hover .drive-icon {
+
+    color:
+        white;
+
+    transform:
+        scale(1.05);
+
+    box-shadow:
+        0 0 18px
+        rgba(66,200,255,0.06);
+}
+
+
+/* =========================================================
+   BATCH TEXT
+   ========================================================= */
+
+.batch-year {
+
+    font-size:
+        24px;
+
+    line-height:
+        1;
+
+    font-weight:
+        900;
+}
+
+.drive-label {
+
+    margin-top:
+        8px;
+
+    color:
+        var(--cyan);
+
+    font-size:
+        8px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        1.2px;
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.modal {
+
+    position:
+        fixed;
+
+    inset:
+        0;
+
+    z-index:
+        999;
+
+    display:
+        none;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding:
+        20px;
+}
+
+.modal.show {
+
+    display:
+        flex;
+}
+
+.modal-overlay {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        rgba(0,4,16,0.79);
+
+    backdrop-filter:
+        blur(6px);
+}
+
+.modal-box {
+
+    width:
+        min(440px,100%);
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    padding:
+        30px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0b1b42,
+            #07132b
+        );
+
+    border:
+        1px solid
+        rgba(66,200,255,0.25);
+
+    border-radius:
+        17px;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,0.45);
+}
+
+
+/* =========================================================
+   ABOUT MODAL
+   ========================================================= */
+
+.about-modal-box {
+
+    width:
+        min(700px, 100%);
+
+    max-height:
+        82vh;
+
+    overflow-y:
+        auto;
+}
+
+.about-content {
+
+    margin-top:
+        5px;
+
+    color:
+        var(--text);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.75;
+}
+
+.about-content p {
+
+    margin-bottom:
+        18px;
+
+    color:
+        #b6c7e6;
+}
+
+.about-content strong {
+
+    color:
+        white;
+
+    font-weight:
+        800;
+}
+
+.about-signature {
+
+    margin-top:
+        24px;
+
+    padding-top:
+        20px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    text-align:
+        center;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.07);
+}
+
+.about-signature span {
+
+    color:
+        var(--muted);
+
+    font-size:
+        11px;
+}
+
+.about-signature strong {
+
+    margin-top:
+        4px;
+
+    color:
+        var(--cyan);
+
+    font-size:
+        18px;
+}
+
+.about-signature small {
+
+    margin-top:
+        5px;
+
+    color:
+        #667794;
+
+    font-size:
+        10px;
+}
+
+
+/* =========================================================
+   MODAL ICON
+   ========================================================= */
+
+.modal-icon {
+
+    width:
+        48px;
+
+    height:
+        48px;
+
+    margin:
+        0 auto 13px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    color:
+        var(--cyan);
+
+    background:
+        rgba(36,92,255,0.08);
+
+    border:
+        1px solid
+        rgba(66,200,255,0.18);
+
+    border-radius:
+        12px;
+}
+
+.modal-icon svg {
+
+    width:
+        24px;
+
+    height:
+        24px;
 
     fill:
         none;
@@ -1548,160 +1859,20 @@ body::before {
 }
 
 
-.batch-card:hover .drive-icon {
-
-    color:
-        white;
-
-    transform:
-        scale(1.05);
-}
-
-
 /* =========================================================
-   BATCH TEXT
+   MODAL TITLE
    ========================================================= */
 
-.batch-year {
+.modal-box h2 {
 
-    font-size:
-        23px;
+    margin-bottom:
+        20px;
 
-    line-height:
-        1;
-
-    font-weight:
-        900;
-}
-
-
-.drive-label {
-
-    margin-top:
-        7px;
-
-    color:
-        var(--cyan);
-
-    font-size:
-        7px;
-
-    font-weight:
-        900;
-
-    letter-spacing:
-        1.1px;
-}
-
-
-/* =========================================================
-   MODAL
-   ========================================================= */
-
-.modal {
-
-    position:
-        fixed;
-
-    inset:
-        0;
-
-    z-index:
-        1000;
-
-    display:
-        none;
-
-    align-items:
+    text-align:
         center;
 
-    justify-content:
-        center;
-
-    padding:
-        18px;
-}
-
-
-.modal.active {
-
-    display:
-        flex;
-}
-
-
-.modal-backdrop {
-
-    position:
-        absolute;
-
-    inset:
-        0;
-
-    background:
-        rgba(0,3,14,0.82);
-
-    backdrop-filter:
-        blur(5px);
-}
-
-
-.modal-content {
-
-    position:
-        relative;
-
-    z-index:
-        2;
-
-    width:
-        min(440px,100%);
-
-    padding:
-        28px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #0b1b42,
-            #07132b
-        );
-
-    border:
-        1px solid
-        rgba(66,200,255,0.23);
-
-    border-radius:
-        17px;
-
-    box-shadow:
-        0 28px 75px
-        rgba(0,0,0,0.48);
-
-    animation:
-        modalAppear 0.18s ease;
-}
-
-
-@keyframes modalAppear {
-
-    from {
-        opacity:
-            0;
-
-        transform:
-            translateY(7px)
-            scale(0.985);
-    }
-
-    to {
-        opacity:
-            1;
-
-        transform:
-            translateY(0)
-            scale(1);
-    }
+    font-size:
+        20px;
 }
 
 
@@ -1718,13 +1889,13 @@ body::before {
         10px;
 
     right:
-        11px;
+        12px;
 
     width:
-        31px;
+        32px;
 
     height:
-        31px;
+        32px;
 
     display:
         flex;
@@ -1744,11 +1915,11 @@ body::before {
     color:
         white;
 
-    border-radius:
-        7px;
-
     font-size:
         23px;
+
+    border-radius:
+        7px;
 
     cursor:
         pointer;
@@ -1756,7 +1927,6 @@ body::before {
     transition:
         var(--transition);
 }
-
 
 .modal-close:hover {
 
@@ -1769,93 +1939,10 @@ body::before {
 
 
 /* =========================================================
-   MODAL ICON
-   ========================================================= */
-
-.modal-icon {
-
-    width:
-        47px;
-
-    height:
-        47px;
-
-    margin:
-        0 auto 13px;
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    color:
-        var(--cyan);
-
-    background:
-        rgba(36,92,255,0.07);
-
-    border:
-        1px solid
-        rgba(66,200,255,0.16);
-
-    border-radius:
-        11px;
-}
-
-
-.modal-icon svg {
-
-    width:
-        23px;
-
-    height:
-        23px;
-
-    fill:
-        none;
-
-    stroke:
-        currentColor;
-
-    stroke-width:
-        1.6;
-
-    stroke-linecap:
-        round;
-
-    stroke-linejoin:
-        round;
-}
-
-
-.modal-content h2 {
-
-    margin-bottom:
-        19px;
-
-    text-align:
-        center;
-
-    color:
-        white;
-
-    font-size:
-        19px;
-
-    font-weight:
-        850;
-}
-
-
-/* =========================================================
    CONTACT
    ========================================================= */
 
-.contact-person {
+.contact-item {
 
     padding:
         15px 0;
@@ -1868,31 +1955,24 @@ body::before {
         rgba(255,255,255,0.06);
 }
 
-
-.contact-person:first-child {
-
+.contact-item:first-child {
     border-top:
         none;
 }
 
-
-.contact-person h3 {
+.contact-item h3 {
 
     margin-bottom:
         5px;
 
     font-size:
         14px;
-
-    font-weight:
-        800;
 }
 
-
-.contact-person a {
+.contact-item a {
 
     color:
-        #61afff;
+        #61b0ff;
 
     font-size:
         12px;
@@ -1901,133 +1981,10 @@ body::before {
         var(--transition);
 }
 
-
-.contact-person a:hover {
-
-    color:
-        var(--cyan);
-}
-
-
-/* =========================================================
-   ABOUT
-   ========================================================= */
-
-.about-modal {
-
-    width:
-        min(530px,100%);
-
-    max-height:
-        86vh;
-
-    overflow-y:
-        auto;
-}
-
-
-.about-paragraphs {
-
-    text-align:
-        left;
-}
-
-
-.about-paragraphs p {
-
-    margin-bottom:
-        16px;
-
-    color:
-        var(--muted);
-
-    font-size:
-        12px;
-
-    line-height:
-        1.78;
-}
-
-
-.about-paragraphs p strong {
-
-    color:
-        var(--text);
-
-    font-weight:
-        800;
-}
-
-
-/* =========================================================
-   ABOUT SIGNATURE
-   ========================================================= */
-
-.about-signature {
-
-    margin-top:
-        20px;
-
-    padding-top:
-        17px;
-
-    text-align:
-        center;
-
-    border-top:
-        1px solid
-        rgba(255,255,255,0.07);
-}
-
-
-.about-signature span {
-
-    display:
-        block;
-
-    color:
-        var(--muted);
-
-    font-size:
-        9px;
-}
-
-
-.about-signature strong {
-
-    display:
-        block;
-
-    margin-top:
-        3px;
+.contact-item a:hover {
 
     color:
         var(--cyan);
-
-    font-size:
-        15px;
-
-    font-weight:
-        900;
-
-    letter-spacing:
-        1px;
-}
-
-
-.about-signature small {
-
-    display:
-        block;
-
-    margin-top:
-        5px;
-
-    color:
-        #60708e;
-
-    font-size:
-        8px;
 }
 
 
@@ -2058,7 +2015,7 @@ button:focus-visible {
     .batch-grid {
 
         grid-template-columns:
-            repeat(2,minmax(0,1fr));
+            repeat(2, minmax(0,1fr));
     }
 
 }
@@ -2101,14 +2058,15 @@ button:focus-visible {
     }
 
 
-    .brand-name strong {
+    .brand-name span {
 
         font-size:
             8px;
     }
 
 
-    .header-actions {
+    .header-actions,
+    .header-nav {
 
         gap:
             4px;
@@ -2118,13 +2076,13 @@ button:focus-visible {
     .header-button {
 
         min-height:
-            31px;
+            32px;
 
         padding:
-            0 8px;
+            0 9px;
 
         font-size:
-            9px;
+            10px;
     }
 
 
@@ -2142,56 +2100,59 @@ button:focus-visible {
     }
 
 
-    .hero-icon {
+    .hero-mark {
 
         width:
-            59px;
+            60px;
 
         height:
-            59px;
+            60px;
+
+        border-radius:
+            16px;
     }
 
 
-    .hero-icon svg {
+    .hero-mark svg {
 
         width:
-            31px;
+            32px;
 
         height:
-            31px;
+            32px;
     }
 
 
-    .hero-label {
+    .hero-kicker {
 
         font-size:
-            7px;
+            8px;
 
         letter-spacing:
-            1.3px;
+            1.5px;
     }
 
 
     .hero h1 {
 
         font-size:
-            clamp(36px,11vw,50px);
+            clamp(36px,11vw,52px);
 
         letter-spacing:
-            -1.6px;
+            -1.7px;
     }
 
 
-    .start-button {
+    .primary-button {
 
         min-height:
-            44px;
+            45px;
 
         padding:
-            0 19px;
+            0 21px;
 
         font-size:
-            9px;
+            10px;
     }
 
 
@@ -2205,24 +2166,24 @@ button:focus-visible {
     .page-heading {
 
         gap:
-            8px;
+            9px;
 
         margin-bottom:
-            27px;
+            28px;
     }
 
 
     .page-heading h1 {
 
         font-size:
-            31px;
+            32px;
     }
 
 
     .heading-line {
 
         width:
-            22px;
+            25px;
     }
 
 
@@ -2234,33 +2195,42 @@ button:focus-visible {
             1fr;
 
         gap:
-            8px;
+            9px;
     }
 
+
+    /* RESOURCE TILES */
 
     .resource-card {
 
         min-height:
-            94px;
+            96px;
 
         padding:
-            12px 14px;
+            13px 15px;
 
         border-radius:
-            11px;
+            12px;
+    }
+
+
+    .resource-card-top {
+
+        align-items:
+            center;
     }
 
 
     .resource-icon {
 
         width:
-            34px;
+            35px;
 
         height:
-            34px;
+            35px;
 
         border-radius:
-            8px;
+            9px;
     }
 
 
@@ -2274,6 +2244,13 @@ button:focus-visible {
     }
 
 
+    .card-index {
+
+        font-size:
+            8px;
+    }
+
+
     .resource-card h2 {
 
         max-width:
@@ -2284,153 +2261,191 @@ button:focus-visible {
     }
 
 
-    .resource-action {
+    .card-action {
 
         font-size:
             7px;
     }
 
 
-    .resource-action svg {
+    .card-action svg {
 
         width:
-            12px;
+            13px;
 
         height:
-            12px;
+            13px;
     }
 
+
+    /* SEMESTER TILES */
 
     .semester-card {
 
         min-height:
-            108px;
+            112px;
 
         padding:
-            11px;
+            12px;
     }
 
 
     .semester-icon {
 
         width:
-            30px;
+            31px;
 
         height:
-            30px;
+            31px;
 
         margin-bottom:
             5px;
+
+        border-radius:
+            8px;
     }
 
 
     .semester-icon svg {
 
         width:
-            17px;
+            18px;
 
         height:
-            17px;
+            18px;
     }
 
 
     .semester-number {
 
         font-size:
-            20px;
+            21px;
     }
 
 
     .semester-card h2 {
 
+        margin-top:
+            3px;
+
         font-size:
-            11px;
+            12px;
     }
 
 
     .semester-action,
     .semester-status {
 
+        margin-top:
+            5px;
+
         font-size:
-            6.5px;
+            7px;
     }
 
 
     .coming-soon {
 
         font-size:
-            6.5px;
+            7px;
     }
 
+
+    /* SENIOR TILES */
 
     .batch-card {
 
         min-height:
-            108px;
+            112px;
 
         padding:
-            11px;
+            12px;
     }
 
 
     .drive-icon {
 
         width:
-            35px;
+            36px;
 
         height:
-            35px;
+            36px;
 
         margin-bottom:
             7px;
+
+        border-radius:
+            9px;
     }
 
 
     .drive-icon svg {
 
         width:
-            19px;
+            20px;
 
         height:
-            19px;
+            20px;
     }
 
 
     .batch-year {
 
         font-size:
-            19px;
+            20px;
     }
 
 
     .drive-label {
 
+        margin-top:
+            5px;
+
         font-size:
-            6.5px;
+            7px;
     }
 
 
-    .modal-content {
+    /* ABOUT MODAL */
+
+    .about-modal-box {
+
+        max-height:
+            84vh;
 
         padding:
             26px 18px;
     }
 
 
-    .about-modal {
-
-        max-height:
-            89vh;
-    }
-
-
-    .about-paragraphs p {
+    .about-content {
 
         font-size:
-            10.5px;
+            12px;
 
         line-height:
             1.7;
+    }
+
+
+    .about-content p {
+
+        margin-bottom:
+            15px;
+    }
+
+
+    .about-signature strong {
+
+        font-size:
+            16px;
+    }
+
+
+    .modal-box {
+
+        padding:
+            27px 18px;
     }
 
 }

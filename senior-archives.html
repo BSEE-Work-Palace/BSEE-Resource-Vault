@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
     <meta charset="UTF-8">
@@ -11,34 +12,61 @@
 
     <title>Senior Drives | BSEE Resource Vault</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <meta
+        name="description"
+        content="Senior batch drives for BSEE students"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
 
 </head>
+
 
 <body>
 
 
-    <!-- =========================
+    <!-- =====================================================
          HEADER
-    ========================== -->
+    ====================================================== -->
 
     <header class="site-header">
 
         <div class="container header-inner">
 
-            <a href="index.html" class="brand">
+
+            <a
+                href="index.html"
+                class="brand"
+                aria-label="BSEE Resource Vault Home"
+            >
 
                 <span class="brand-icon">
 
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M13.2 2 5 13h5.4L9.8 22 19 9h-5.7z"/>
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+
+                        <path
+                            d="M13.2 2 5 13h5.4L9.8 22 19 9h-5.7z"
+                        />
+
                     </svg>
 
                 </span>
 
+
                 <span class="brand-name">
+
                     BSEE
-                    <span>RESOURCE VAULT</span>
+
+                    <span>
+                        RESOURCE VAULT
+                    </span>
+
                 </span>
 
             </a>
@@ -53,6 +81,7 @@
                     ← Back
                 </a>
 
+
                 <a
                     href="index.html"
                     class="header-button"
@@ -60,10 +89,11 @@
                     Home
                 </a>
 
+
                 <button
                     class="header-button"
                     type="button"
-                    data-contact-open
+                    data-modal-open="contactModal"
                 >
                     Contact
                 </button>
@@ -75,13 +105,15 @@
     </header>
 
 
-    <!-- =========================
+
+    <!-- =====================================================
          MAIN
-    ========================== -->
+    ====================================================== -->
 
     <main class="page-main">
 
         <div class="container">
+
 
             <section class="page-heading">
 
@@ -96,9 +128,10 @@
             </section>
 
 
-            <!-- =========================
-                 SENIOR DRIVES
-            ========================== -->
+
+            <!-- =================================================
+                 SENIOR DRIVE GRID
+            ================================================== -->
 
             <section class="batch-grid">
 
@@ -107,14 +140,17 @@
 
                 <a
                     href="https://drive.google.com/drive/folders/1xJ70GVUB_wMJm5U-GAJUQ9hj6VqIRTBv"
+                    class="batch-card"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="batch-card"
                 >
 
                     <div class="drive-icon">
 
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
 
                             <path
                                 d="M3 7h5l2 2h11v10a2 2 0 0 1-2 2H3z"
@@ -141,18 +177,22 @@
                 </a>
 
 
+
                 <!-- 22 - 26 -->
 
                 <a
                     href="https://eeworkpalace.github.io/EE_Work_Palace/"
+                    class="batch-card"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="batch-card"
                 >
 
                     <div class="drive-icon">
 
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
 
                             <path
                                 d="M3 7h5l2 2h11v10a2 2 0 0 1-2 2H3z"
@@ -179,18 +219,22 @@
                 </a>
 
 
+
                 <!-- 23 - 27 -->
 
                 <a
                     href="https://drive.google.com/drive/folders/1cPg3tPMORB7QGcwdPHdCjMfUwgp34kc2"
+                    class="batch-card"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="batch-card"
                 >
 
                     <div class="drive-icon">
 
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
 
                             <path
                                 d="M3 7h5l2 2h11v10a2 2 0 0 1-2 2H3z"
@@ -217,18 +261,22 @@
                 </a>
 
 
+
                 <!-- 24 - 28 -->
 
                 <a
                     href="https://drive.google.com/drive/folders/1bSbmzMlaidsJqDkbiDuRxRSkCspu3ecf2"
+                    class="batch-card"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="batch-card"
                 >
 
                     <div class="drive-icon">
 
-                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <svg
+                            viewBox="0 0 24 24"
+                            aria-hidden="true"
+                        >
 
                             <path
                                 d="M3 7h5l2 2h11v10a2 2 0 0 1-2 2H3z"
@@ -262,9 +310,10 @@
     </main>
 
 
-    <!-- =========================
+
+    <!-- =====================================================
          CONTACT MODAL
-    ========================== -->
+    ====================================================== -->
 
     <div
         class="modal"
@@ -274,7 +323,7 @@
 
         <div
             class="modal-overlay"
-            data-contact-close
+            data-modal-close="contactModal"
         ></div>
 
 
@@ -282,13 +331,13 @@
             class="modal-box"
             role="dialog"
             aria-modal="true"
-            aria-labelledby="contact-title"
+            aria-labelledby="contactTitle"
         >
 
             <button
                 class="modal-close"
                 type="button"
-                data-contact-close
+                data-modal-close="contactModal"
             >
                 ×
             </button>
@@ -296,7 +345,10 @@
 
             <div class="modal-icon">
 
-                <svg viewBox="0 0 24 24" aria-hidden="true">
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
 
                     <rect
                         x="4"
@@ -313,41 +365,50 @@
             </div>
 
 
-            <h2 id="contact-title">
+            <h2 id="contactTitle">
                 For Help Contact
             </h2>
 
-<div class="contact-item">
-    <h3>
-        Aqsa Noor
-    </h3>
 
-    <a href="mailto:aqsa36noor36@gmail.com">
-        aqsa36noor36@gmail.com
-    </a>
-</div>
+            <div class="contact-list">
 
+                <div class="contact-item">
 
-<div class="contact-item">
-    <h3>
-        Muhammad Uzair
-    </h3>
+                    <h3>
+                        Muhammad Uzair
+                    </h3>
 
-    <a href="mailto:muhduzair0179@gmail.com">
-        muhduzair0179@gmail.com
-    </a>
-</div>
+                    <a href="mailto:muhduzair0179@gmail.com">
+                        muhduzair0179@gmail.com
+                    </a>
+
+                </div>
 
 
-<div class="contact-item">
-    <h3>
-        Asad Javed
-    </h3>
+                <div class="contact-item">
 
-    <a href="mailto:javedasad002@gmail.com">
-        javedasad002@gmail.com
-    </a>
-</div>
+                    <h3>
+                        Asad Javed
+                    </h3>
+
+                    <a href="mailto:javedasad002@gmail.com">
+                        javedasad002@gmail.com
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <h3>
+                        Aqsa Noor
+                    </h3>
+
+                    <a href="mailto:aqsa36noor36@gmail.com">
+                        aqsa36noor36@gmail.com
+                    </a>
+
+                </div>
 
             </div>
 
@@ -356,7 +417,9 @@
     </div>
 
 
+
     <script src="js/main.js"></script>
 
 </body>
+
 </html>

@@ -1,227 +1,202 @@
 /* =========================================================
    BSEE RESOURCE VAULT
-   MAIN JAVASCRIPT
+   MODAL SYSTEM
    ========================================================= */
 
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
+document.addEventListener("DOMContentLoaded", function () {
 
 
-        /* =================================================
-           CONTACT MODAL
-        ================================================= */
+    /* =====================================================
+       OPEN ANY MODAL
+       ===================================================== */
 
-        const contactModal =
-            document.getElementById(
-                "contactModal"
-            );
-
-
-        const contactOpenButtons =
-            document.querySelectorAll(
-                "[data-contact-open]"
-            );
+    const modalOpenButtons =
+        document.querySelectorAll(
+            "[data-modal-open]"
+        );
 
 
-        const contactCloseButtons =
-            document.querySelectorAll(
-                "[data-contact-close]"
-            );
+    modalOpenButtons.forEach(function (button) {
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                const modalId =
+                    button.getAttribute(
+                        "data-modal-open"
+                    );
 
 
-        function openContact() {
+                const modal =
+                    document.getElementById(
+                        modalId
+                    );
 
-            if (!contactModal) {
+
+                if (!modal) {
+                    return;
+                }
+
+
+                modal.classList.add(
+                    "show"
+                );
+
+
+                modal.setAttribute(
+                    "aria-hidden",
+                    "false"
+                );
+
+
+                document.body.classList.add(
+                    "modal-open"
+                );
+
+            }
+        );
+
+    });
+
+
+
+    /* =====================================================
+       CLOSE ANY MODAL
+    ===================================================== */
+
+    const modalCloseButtons =
+        document.querySelectorAll(
+            "[data-modal-close]"
+        );
+
+
+    modalCloseButtons.forEach(function (button) {
+
+        button.addEventListener(
+            "click",
+            function () {
+
+                const modalId =
+                    button.getAttribute(
+                        "data-modal-close"
+                    );
+
+
+                const modal =
+                    document.getElementById(
+                        modalId
+                    );
+
+
+                if (!modal) {
+                    return;
+                }
+
+
+                modal.classList.remove(
+                    "show"
+                );
+
+
+                modal.setAttribute(
+                    "aria-hidden",
+                    "true"
+                );
+
+
+                document.body.classList.remove(
+                    "modal-open"
+                );
+
+            }
+        );
+
+    });
+
+
+
+    /* =====================================================
+       ESCAPE KEY
+    ===================================================== */
+
+    document.addEventListener(
+        "keydown",
+        function (event) {
+
+            if (event.key !== "Escape") {
                 return;
             }
 
-            contactModal.classList.add(
-                "show"
-            );
 
-            contactModal.setAttribute(
-                "aria-hidden",
-                "false"
-            );
-
-            document.body.classList.add(
-                "modal-open"
-            );
-        }
+            const openModals =
+                document.querySelectorAll(
+                    ".modal.show"
+                );
 
 
-        function closeContact() {
+            openModals.forEach(function (modal) {
 
-            if (!contactModal) {
-                return;
-            }
+                modal.classList.remove(
+                    "show"
+                );
 
-            contactModal.classList.remove(
-                "show"
-            );
 
-            contactModal.setAttribute(
-                "aria-hidden",
-                "true"
-            );
+                modal.setAttribute(
+                    "aria-hidden",
+                    "true"
+                );
+
+            });
+
 
             document.body.classList.remove(
                 "modal-open"
             );
+
         }
+    );
 
 
-        contactOpenButtons.forEach(
-            function (button) {
 
-                button.addEventListener(
-                    "click",
-                    openContact
-                );
+    /* =====================================================
+       CLICK OUTSIDE MODAL
+    ===================================================== */
 
-            }
-        );
+    document.querySelectorAll(
+        ".modal"
+    ).forEach(function (modal) {
 
-
-        contactCloseButtons.forEach(
-            function (button) {
-
-                button.addEventListener(
-                    "click",
-                    closeContact
-                );
-
-            }
-        );
-
-
-        /* =================================================
-           ABOUT MODAL
-        ================================================= */
-
-        const aboutModal =
-            document.getElementById(
-                "aboutModal"
-            );
-
-
-        const aboutOpenButtons =
-            document.querySelectorAll(
-                "[data-about-open]"
-            );
-
-
-        const aboutCloseButtons =
-            document.querySelectorAll(
-                "[data-about-close]"
-            );
-
-
-        function openAbout() {
-
-            if (!aboutModal) {
-                return;
-            }
-
-            aboutModal.classList.add(
-                "show"
-            );
-
-            aboutModal.setAttribute(
-                "aria-hidden",
-                "false"
-            );
-
-            document.body.classList.add(
-                "modal-open"
-            );
-        }
-
-
-        function closeAbout() {
-
-            if (!aboutModal) {
-                return;
-            }
-
-            aboutModal.classList.remove(
-                "show"
-            );
-
-            aboutModal.setAttribute(
-                "aria-hidden",
-                "true"
-            );
-
-            document.body.classList.remove(
-                "modal-open"
-            );
-        }
-
-
-        aboutOpenButtons.forEach(
-            function (button) {
-
-                button.addEventListener(
-                    "click",
-                    openAbout
-                );
-
-            }
-        );
-
-
-        aboutCloseButtons.forEach(
-            function (button) {
-
-                button.addEventListener(
-                    "click",
-                    closeAbout
-                );
-
-            }
-        );
-
-
-        /* =================================================
-           ESCAPE KEY
-        ================================================= */
-
-        document.addEventListener(
-            "keydown",
+        modal.addEventListener(
+            "click",
             function (event) {
 
                 if (
-                    event.key !== "Escape"
-                ) {
-                    return;
-                }
-
-
-                if (
-                    aboutModal &&
-                    aboutModal.classList.contains("show")
+                    event.target.classList.contains(
+                        "modal-overlay"
+                    )
                 ) {
 
-                    closeAbout();
+                    modal.classList.remove(
+                        "show"
+                    );
 
-                    return;
-                }
+
+                    modal.setAttribute(
+                        "aria-hidden",
+                        "true"
+                    );
 
 
-                if (
-                    contactModal &&
-                    contactModal.classList.contains("show")
-                ) {
-
-                    closeContact();
+                    document.body.classList.remove(
+                        "modal-open"
+                    );
 
                 }
 
             }
         );
 
+    });
 
-    }
-);
+});

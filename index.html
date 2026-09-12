@@ -1,41 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <meta name="description"
-          content="BSEE Resource Vault - Electrical Engineering resources by BSEE 2025-29">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>BSEE Resource Vault</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <meta
+        name="description"
+        content="BSEE Resource Vault - Electrical Engineering resources"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
 </head>
 
-<body class="home-page">
+<body>
 
-    <!-- =====================================================
+
+    <!-- =========================
          HEADER
-    ====================================================== -->
+    ========================== -->
 
     <header class="site-header">
 
         <div class="container header-inner">
 
-            <a href="index.html" class="brand">
+            <a
+                href="index.html"
+                class="brand"
+            >
 
                 <span class="brand-icon">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M13 2 5 13h6l-2 9 10-13h-6z"></path>
+
+                    <svg
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path d="M13.2 2 5 13h5.4L9.8 22 19 9h-5.7z"/>
                     </svg>
+
                 </span>
 
-                <span class="brand-text">
-                    <span>BSEE</span>
-                    <strong>RESOURCE VAULT</strong>
+                <span class="brand-name">
+                    BSEE
+                    <span>RESOURCE VAULT</span>
                 </span>
 
             </a>
@@ -44,17 +61,17 @@
             <div class="header-actions">
 
                 <button
-                    type="button"
                     class="header-button"
-                    id="aboutButton"
+                    type="button"
+                    data-about-open
                 >
                     About
                 </button>
 
                 <button
-                    type="button"
                     class="header-button"
-                    id="contactButton"
+                    type="button"
+                    data-contact-open
                 >
                     Contact
                 </button>
@@ -66,62 +83,83 @@
     </header>
 
 
-    <!-- =====================================================
+    <!-- =========================
          HERO
-    ====================================================== -->
+    ========================== -->
 
     <main class="hero">
 
-        <div class="hero-grid"></div>
+        <div class="technical-grid"></div>
 
-        <div class="hero-glow hero-glow-left"></div>
-        <div class="hero-glow hero-glow-right"></div>
+        <div class="soft-glow glow-one"></div>
+
+        <div class="soft-glow glow-two"></div>
 
 
-        <div class="hero-content">
+        <div class="container hero-content">
 
-            <div class="hero-icon">
 
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M13 2 5 13h6l-2 9 10-13h-6z"></path>
+            <div class="hero-mark">
+
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+                    <path d="M13.2 2 5 13h5.4L9.8 22 19 9h-5.7z"/>
                 </svg>
 
             </div>
 
 
-            <p class="hero-label">
+            <div class="hero-kicker">
+
                 BACHELOR OF SCIENCE IN ELECTRICAL ENGINEERING
-            </p>
+
+            </div>
 
 
             <h1>
+
                 Welcome to
-                <span>BSEE Resource Vault</span>
+
+                <span>
+                    BSEE Resource Vault
+                </span>
+
             </h1>
 
 
             <a
                 href="resources.html"
-                class="start-button"
+                class="primary-button"
             >
 
-                <span>GET STARTED</span>
+                <span>
+                    GET STARTED
+                </span>
 
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M5 12h14"></path>
-                    <path d="m13 6 6 6-6 6"></path>
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
+
+                    <path d="M5 12h14"/>
+
+                    <path d="m13 6 6 6-6 6"/>
+
                 </svg>
 
             </a>
+
 
         </div>
 
     </main>
 
 
-    <!-- =====================================================
+    <!-- =========================
          ABOUT MODAL
-    ====================================================== -->
+    ========================== -->
 
     <div
         class="modal"
@@ -129,109 +167,127 @@
         aria-hidden="true"
     >
 
-        <div class="modal-backdrop" id="aboutBackdrop"></div>
+        <div
+            class="modal-overlay"
+            data-about-close
+        ></div>
 
 
         <div
-            class="modal-content about-modal"
+            class="modal-box about-modal-box"
             role="dialog"
             aria-modal="true"
-            aria-labelledby="aboutHeading"
+            aria-labelledby="about-title"
         >
 
+
             <button
-                type="button"
                 class="modal-close"
-                id="aboutClose"
-                aria-label="Close About"
+                type="button"
+                aria-label="Close about"
+                data-about-close
             >
-                &times;
+                ×
             </button>
 
 
             <div class="modal-icon">
 
-                <svg viewBox="0 0 24 24" aria-hidden="true">
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
 
                     <circle
                         cx="12"
                         cy="12"
                         r="9"
-                    ></circle>
+                    />
 
                     <path
-                        d="M12 10v6"
-                    ></path>
+                        d="M12 11v5"
+                    />
 
-                    <circle
-                        cx="12"
-                        cy="7"
-                        r="0.7"
-                        fill="currentColor"
-                        stroke="none"
-                    ></circle>
+                    <path
+                        d="M12 8h.01"
+                    />
 
                 </svg>
 
             </div>
 
 
-            <h2 id="aboutHeading">
+            <h2 id="about-title">
                 About BSEE Resource Vault
             </h2>
 
 
-            <div class="about-paragraphs">
+            <div class="about-content">
+
 
                 <p>
+
                     <strong>BSEE Resource Vault</strong> is a
                     student-led initiative of the
                     <strong>BSEE 2025–29 batch</strong>, created
-                    with the purpose of bringing useful Electrical
-                    Engineering resources together in one organized,
-                    accessible, and easy-to-use platform. The goal is
-                    to make academic material easier to find and to
-                    provide students with a reliable place to access
-                    resources throughout their university journey.
+                    with the aim of bringing essential Electrical
+                    Engineering resources together in one accessible
+                    and organized platform. The purpose of this
+                    initiative is simple: to make academic resources
+                    easier to find, easier to access, and more useful
+                    for students throughout their university journey.
+
                 </p>
+
 
                 <p>
-                    The platform currently brings together semester
-                    resources, past papers, projects, and drives
-                    containing material from senior batches. As the
-                    BSEE 2025–29 batch progresses through the degree,
-                    this platform will continue to grow with more
-                    semesters, additional academic material, projects,
-                    and resources that may benefit the students who
-                    follow us.
+
+                    The platform currently provides access to
+                    semester-wise study material, past papers,
+                    projects, and resources collected from senior
+                    batches. As our batch progresses through the
+                    degree, the platform will continue to grow with
+                    additional semesters, academic material, projects,
+                    and other resources that may benefit the students
+                    who come after us.
+
                 </p>
+
 
                 <p>
-                    This is more than a collection of files and links.
-                    It is a small effort by the
-                    <strong>BSEE 2025–29 batch</strong> to build
-                    something useful for our juniors. We hope this
-                    platform helps students save time, prepare better,
-                    share knowledge, and make their academic journey
-                    a little easier.
+
+                    More than a collection of files and links, this
+                    platform represents a small effort by the
+                    <strong>BSEE 2025–29 batch</strong> to leave behind
+                    something useful for our juniors. We hope that the
+                    resources gathered here will save time, support
+                    preparation, encourage collaboration, and make the
+                    academic experience a little easier for those who
+                    follow.
+
                 </p>
 
-            </div>
+
+                <!-- SIGNATURE -->
+
+                <div class="about-signature">
+
+                    <span>
+                        Built with purpose by
+                    </span>
 
 
-            <div class="about-signature">
+                    <strong>
+                        BSEE 2025–29
+                    </strong>
 
-                <span>
-                    Built with purpose by
-                </span>
 
-                <strong>
-                    BSEE 2025–29
-                </strong>
+                    <small>
+                        More resources. More semesters. More to come.
+                    </small>
 
-                <small>
-                    More resources. More semesters. More to come.
-                </small>
+                </div>
+
 
             </div>
 
@@ -240,9 +296,9 @@
     </div>
 
 
-    <!-- =====================================================
+    <!-- =========================
          CONTACT MODAL
-    ====================================================== -->
+    ========================== -->
 
     <div
         class="modal"
@@ -250,29 +306,36 @@
         aria-hidden="true"
     >
 
-        <div class="modal-backdrop" id="contactBackdrop"></div>
+        <div
+            class="modal-overlay"
+            data-contact-close
+        ></div>
 
 
         <div
-            class="modal-content contact-modal"
+            class="modal-box"
             role="dialog"
             aria-modal="true"
-            aria-labelledby="contactHeading"
+            aria-labelledby="contact-title"
         >
 
+
             <button
-                type="button"
                 class="modal-close"
-                id="contactClose"
-                aria-label="Close Contact"
+                type="button"
+                aria-label="Close contact"
+                data-contact-close
             >
-                &times;
+                ×
             </button>
 
 
             <div class="modal-icon">
 
-                <svg viewBox="0 0 24 24" aria-hidden="true">
+                <svg
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                >
 
                     <rect
                         x="4"
@@ -280,18 +343,18 @@
                         width="16"
                         height="14"
                         rx="2"
-                    ></rect>
+                    />
 
                     <path
                         d="m4 7 8 6 8-6"
-                    ></path>
+                    />
 
                 </svg>
 
             </div>
 
 
-            <h2 id="contactHeading">
+            <h2 id="contact-title">
                 For Help Contact
             </h2>
 
@@ -299,48 +362,45 @@
             <div class="contact-list">
 
 
-                <!-- 1 -->
-                <div class="contact-person">
+                <!-- AQSA FIRST -->
+
+                <div class="contact-item">
 
                     <h3>
                         Aqsa Noor
                     </h3>
 
-                    <a
-                        href="mailto:aqsa36noor36@gmail.com"
-                    >
+                    <a href="mailto:aqsa36noor36@gmail.com">
                         aqsa36noor36@gmail.com
                     </a>
 
                 </div>
 
 
-                <!-- 2 -->
-                <div class="contact-person">
+                <!-- MUHAMMAD UZAIR SECOND -->
+
+                <div class="contact-item">
 
                     <h3>
                         Muhammad Uzair
                     </h3>
 
-                    <a
-                        href="mailto:muhduzair0179@gmail.com"
-                    >
+                    <a href="mailto:muhduzair0179@gmail.com">
                         muhduzair0179@gmail.com
                     </a>
 
                 </div>
 
 
-                <!-- 3 -->
-                <div class="contact-person">
+                <!-- ASAD THIRD -->
+
+                <div class="contact-item">
 
                     <h3>
                         Asad Javed
                     </h3>
 
-                    <a
-                        href="mailto:javedasad002@gmail.com"
-                    >
+                    <a href="mailto:javedasad002@gmail.com">
                         javedasad002@gmail.com
                     </a>
 
@@ -357,5 +417,4 @@
     <script src="js/main.js"></script>
 
 </body>
-
 </html>

@@ -103,7 +103,6 @@ body {
 
 
 body.modal-open {
-
     overflow:
         hidden;
 }
@@ -324,7 +323,7 @@ body::before {
 
 
 /* =========================================================
-   HEADER NAVIGATION
+   HEADER BUTTONS
    ========================================================= */
 
 .header-nav {
@@ -524,7 +523,7 @@ body::before {
 
 
 /* =========================================================
-   HERO MARK
+   HERO LIGHTNING
    ========================================================= */
 
 .hero-mark {
@@ -758,7 +757,7 @@ body::before {
 
 
 /* =========================================================
-   INTERNAL PAGE
+   INTERNAL PAGES
    ========================================================= */
 
 .page-main {
@@ -904,6 +903,52 @@ body::before {
 }
 
 
+.resource-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        -110%;
+
+    top:
+        0;
+
+    width:
+        75%;
+
+    height:
+        100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(66,200,255,0.055),
+            transparent
+        );
+
+    transform:
+        skewX(-20deg);
+
+    transition:
+        0.65s ease;
+
+    pointer-events:
+        none;
+}
+
+
+.resource-card:hover::before {
+
+    left:
+        130%;
+}
+
+
 .resource-card:hover {
 
     transform:
@@ -919,7 +964,7 @@ body::before {
 
 
 /* =========================================================
-   RESOURCE CARD TOP
+   RESOURCE TOP
    ========================================================= */
 
 .resource-card-top {
@@ -1022,7 +1067,7 @@ body::before {
 
 
 /* =========================================================
-   RESOURCE CARD TITLE
+   RESOURCE TITLE
    ========================================================= */
 
 .resource-card h2 {
@@ -1339,7 +1384,7 @@ body::before {
 
 
 /* =========================================================
-   SEMESTER ACTION
+   SEMESTER STATUS
    ========================================================= */
 
 .semester-action {
@@ -1596,7 +1641,7 @@ body::before {
 
 
 /* =========================================================
-   MODALS
+   MODAL
    ========================================================= */
 
 .modal {
@@ -1649,14 +1694,14 @@ body::before {
 
 .modal-box {
 
-    width:
-        min(440px,100%);
-
     position:
         relative;
 
     z-index:
         2;
+
+    width:
+        min(440px,100%);
 
     padding:
         30px;
@@ -1680,6 +1725,10 @@ body::before {
         rgba(0,0,0,0.45);
 }
 
+
+/* =========================================================
+   MODAL CLOSE
+   ========================================================= */
 
 .modal-close {
 
@@ -1814,6 +1863,9 @@ body::before {
 
     font-size:
         20px;
+
+    font-weight:
+        850;
 }
 
 
@@ -1873,7 +1925,7 @@ body::before {
 
 
 /* =========================================================
-   ABOUT MODAL
+   ABOUT
    ========================================================= */
 
 .about-box {
@@ -1886,9 +1938,6 @@ body::before {
 
     overflow-y:
         auto;
-
-    padding:
-        32px;
 }
 
 
@@ -1932,7 +1981,7 @@ body::before {
 .about-signature {
 
     margin-top:
-        21px;
+        20px;
 
     padding-top:
         18px;
@@ -1959,9 +2008,6 @@ body::before {
 
     font-size:
         10px;
-
-    letter-spacing:
-        0.4px;
 }
 
 
@@ -1997,9 +2043,6 @@ body::before {
 
     font-size:
         9px;
-
-    letter-spacing:
-        0.6px;
 }
 
 
@@ -2042,15 +2085,14 @@ button:focus-visible {
 
 @media (max-width: 600px) {
 
-    .container {
 
+    .container {
         width:
             90%;
     }
 
 
     .header-inner {
-
         min-height:
             62px;
     }
@@ -2271,7 +2313,7 @@ button:focus-visible {
     }
 
 
-    /* SEMESTER TILES */
+    /* SEMESTERS */
 
     .semester-card {
 
@@ -2341,7 +2383,7 @@ button:focus-visible {
     }
 
 
-    /* SENIOR DRIVE TILES */
+    /* SENIOR DRIVES */
 
     .batch-card {
 
@@ -2400,14 +2442,11 @@ button:focus-visible {
 
     .about-box {
 
-        width:
-            min(100%, 520px);
-
         max-height:
             88vh;
 
         padding:
-            28px 20px;
+            28px 19px;
     }
 
 

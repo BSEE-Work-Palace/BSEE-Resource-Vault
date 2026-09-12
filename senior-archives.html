@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
     <meta charset="UTF-8">
@@ -8,11 +7,6 @@
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
-    >
-
-    <meta
-        name="description"
-        content="Senior batch drives - BSEE Resource Vault"
     >
 
     <title>Senior Drives | BSEE Resource Vault</title>
@@ -24,13 +18,12 @@
 
 </head>
 
-
 <body>
 
 
-    <!-- =====================================================
+    <!-- =========================
          HEADER
-    ====================================================== -->
+    ========================== -->
 
     <header class="site-header">
 
@@ -50,8 +43,8 @@
                     >
 
                         <path
-                            d="M13 2 5 13h6l-2 9 10-13h-6z"
-                        ></path>
+                            d="M13.2 2 5 13h5.4L9.8 22 19 9h-5.7z"
+                        />
 
                     </svg>
 
@@ -60,18 +53,19 @@
 
                 <span class="brand-name">
 
-                    <span>BSEE</span>
+                    BSEE
 
-                    <strong>
+                    <span>
                         RESOURCE VAULT
-                    </strong>
+                    </span>
 
                 </span>
 
             </a>
 
 
-            <div class="header-actions">
+            <nav class="header-nav">
+
 
                 <a
                     href="resources.html"
@@ -90,24 +84,24 @@
 
 
                 <button
-                    type="button"
                     class="header-button"
-                    id="contactButton"
+                    type="button"
+                    data-contact-open
                 >
                     Contact
                 </button>
 
-            </div>
+
+            </nav>
 
         </div>
 
     </header>
 
 
-
-    <!-- =====================================================
+    <!-- =========================
          MAIN
-    ====================================================== -->
+    ========================== -->
 
     <main class="page-main">
 
@@ -126,6 +120,10 @@
 
             </section>
 
+
+            <!-- =========================
+                 SENIOR DRIVES
+            ========================== -->
 
             <section class="batch-grid">
 
@@ -148,11 +146,11 @@
 
                             <path
                                 d="M3 7h5l2 2h11v10a2 2 0 0 1-2 2H3z"
-                            ></path>
+                            />
 
                             <path
                                 d="M3 7V5a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v2"
-                            ></path>
+                            />
 
                         </svg>
 
@@ -169,7 +167,6 @@
                     </span>
 
                 </a>
-
 
 
                 <!-- 22 - 26 -->
@@ -190,11 +187,11 @@
 
                             <path
                                 d="M3 7h5l2 2h11v10a2 2 0 0 1-2 2H3z"
-                            ></path>
+                            />
 
                             <path
                                 d="M3 7V5a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v2"
-                            ></path>
+                            />
 
                         </svg>
 
@@ -211,7 +208,6 @@
                     </span>
 
                 </a>
-
 
 
                 <!-- 23 - 27 -->
@@ -232,11 +228,11 @@
 
                             <path
                                 d="M3 7h5l2 2h11v10a2 2 0 0 1-2 2H3z"
-                            ></path>
+                            />
 
                             <path
                                 d="M3 7V5a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v2"
-                            ></path>
+                            />
 
                         </svg>
 
@@ -253,7 +249,6 @@
                     </span>
 
                 </a>
-
 
 
                 <!-- 24 - 28 -->
@@ -274,11 +269,11 @@
 
                             <path
                                 d="M3 7h5l2 2h11v10a2 2 0 0 1-2 2H3z"
-                            ></path>
+                            />
 
                             <path
                                 d="M3 7V5a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v2"
-                            ></path>
+                            />
 
                         </svg>
 
@@ -304,10 +299,9 @@
     </main>
 
 
-
-    <!-- =====================================================
+    <!-- =========================
          CONTACT MODAL
-    ====================================================== -->
+    ========================== -->
 
     <div
         class="modal"
@@ -316,24 +310,24 @@
     >
 
         <div
-            class="modal-backdrop"
-            id="contactBackdrop"
+            class="modal-overlay"
+            data-contact-close
         ></div>
 
 
         <div
-            class="modal-content contact-modal"
+            class="modal-box"
             role="dialog"
             aria-modal="true"
-            aria-labelledby="contactHeading"
+            aria-labelledby="contact-title"
         >
 
             <button
-                type="button"
                 class="modal-close"
-                id="contactClose"
+                type="button"
+                data-contact-close
             >
-                &times;
+                ×
             </button>
 
 
@@ -350,18 +344,18 @@
                         width="16"
                         height="14"
                         rx="2"
-                    ></rect>
+                    />
 
                     <path
                         d="m4 7 8 6 8-6"
-                    ></path>
+                    />
 
                 </svg>
 
             </div>
 
 
-            <h2 id="contactHeading">
+            <h2 id="contact-title">
                 For Help Contact
             </h2>
 
@@ -369,30 +363,42 @@
             <div class="contact-list">
 
 
-                <div class="contact-person">
-                    <h3>Aqsa Noor</h3>
+                <div class="contact-item">
+
+                    <h3>
+                        Aqsa Noor
+                    </h3>
 
                     <a href="mailto:aqsa36noor36@gmail.com">
                         aqsa36noor36@gmail.com
                     </a>
+
                 </div>
 
 
-                <div class="contact-person">
-                    <h3>Muhammad Uzair</h3>
+                <div class="contact-item">
+
+                    <h3>
+                        Muhammad Uzair
+                    </h3>
 
                     <a href="mailto:muhduzair0179@gmail.com">
                         muhduzair0179@gmail.com
                     </a>
+
                 </div>
 
 
-                <div class="contact-person">
-                    <h3>Asad Javed</h3>
+                <div class="contact-item">
+
+                    <h3>
+                        Asad Javed
+                    </h3>
 
                     <a href="mailto:javedasad002@gmail.com">
                         javedasad002@gmail.com
                     </a>
+
                 </div>
 
 
@@ -406,5 +412,4 @@
     <script src="js/main.js"></script>
 
 </body>
-
 </html>

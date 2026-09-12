@@ -14,7 +14,7 @@
 
     <meta
         name="description"
-        content="BSEE Resource Vault - Electrical Engineering resources"
+        content="BSEE Resource Vault - A student-built Electrical Engineering resource platform by BSEE 2025-29."
     >
 
     <link
@@ -27,7 +27,6 @@
 
 <body>
 
-
     <!-- =====================================================
          HEADER
     ====================================================== -->
@@ -36,12 +35,12 @@
 
         <div class="container header-inner">
 
-
             <!-- BRAND -->
 
             <a
                 href="index.html"
                 class="brand"
+                aria-label="BSEE Resource Vault Home"
             >
 
                 <span class="brand-icon">
@@ -50,11 +49,9 @@
                         viewBox="0 0 24 24"
                         aria-hidden="true"
                     >
-
                         <path
                             d="M13.2 2 5 13h5.4L9.8 22 19 9h-5.7z"
                         />
-
                     </svg>
 
                 </span>
@@ -73,14 +70,14 @@
             </a>
 
 
-            <!-- NAVIGATION -->
+            <!-- FIRST PAGE ONLY -->
 
             <nav class="header-nav">
 
                 <button
                     class="header-button"
                     type="button"
-                    data-about-open
+                    data-modal-open="aboutModal"
                 >
                     About
                 </button>
@@ -89,13 +86,12 @@
                 <button
                     class="header-button"
                     type="button"
-                    data-contact-open
+                    data-modal-open="contactModal"
                 >
                     Contact
                 </button>
 
             </nav>
-
 
         </div>
 
@@ -109,17 +105,12 @@
 
     <main class="hero">
 
-
-        <!-- BACKGROUND -->
-
         <div class="technical-grid"></div>
 
         <div class="soft-glow glow-one"></div>
 
         <div class="soft-glow glow-two"></div>
 
-
-        <!-- HERO CONTENT -->
 
         <div class="container hero-content">
 
@@ -142,12 +133,10 @@
             </div>
 
 
-            <!-- SMALL TITLE -->
+            <!-- SMALL IDENTIFIER -->
 
             <div class="hero-kicker">
-
                 BACHELOR OF SCIENCE IN ELECTRICAL ENGINEERING
-
             </div>
 
 
@@ -164,7 +153,7 @@
             </h1>
 
 
-            <!-- BUTTON -->
+            <!-- START -->
 
             <a
                 href="resources.html"
@@ -206,19 +195,17 @@
         aria-hidden="true"
     >
 
-
         <div
             class="modal-overlay"
-            data-about-close
+            data-modal-close="aboutModal"
         ></div>
-
 
 
         <div
             class="modal-box about-box"
             role="dialog"
             aria-modal="true"
-            aria-labelledby="about-title"
+            aria-labelledby="aboutTitle"
         >
 
 
@@ -227,15 +214,14 @@
             <button
                 class="modal-close"
                 type="button"
-                aria-label="Close about"
-                data-about-close
+                aria-label="Close About"
+                data-modal-close="aboutModal"
             >
                 ×
             </button>
 
 
-
-            <!-- ABOUT ICON -->
+            <!-- ICON -->
 
             <div class="modal-icon">
 
@@ -267,18 +253,14 @@
             </div>
 
 
+            <!-- TITLE -->
 
-            <!-- ABOUT TITLE -->
-
-            <h2 id="about-title">
-
+            <h2 id="aboutTitle">
                 About BSEE Resource Vault
-
             </h2>
 
 
-
-            <!-- ABOUT PARAGRAPHS -->
+            <!-- PROFESSIONAL PARAGRAPHS -->
 
             <div class="about-text">
 
@@ -288,45 +270,42 @@
                     <strong>BSEE Resource Vault</strong> is a
                     student-led initiative of the
                     <strong>BSEE 2025–29 batch</strong>, created
-                    with the aim of bringing essential Electrical
-                    Engineering resources together in one accessible
-                    and organized platform. The purpose of this
-                    initiative is simple: to make academic resources
+                    with the purpose of bringing useful Electrical
+                    Engineering resources together in one organized
+                    and accessible platform. The idea behind the
+                    platform is simple: to make academic material
                     easier to find, easier to access, and more useful
                     for students throughout their university journey.
 
                 </p>
 
 
-
                 <p>
 
                     The platform currently provides access to
-                    semester-wise study material, past papers,
-                    projects, and resources collected from senior
-                    batches. As our batch progresses through the
-                    degree, the platform will continue to grow with
-                    additional semesters, academic material, projects,
-                    and other resources that may benefit the students
-                    who come after us.
+                    semester resources, past papers, projects, and
+                    drives containing material collected from senior
+                    batches. As the BSEE 2025–29 batch progresses
+                    through the degree, the platform will continue
+                    to grow with additional semesters, academic
+                    resources, projects, and material that can help
+                    future students.
 
                 </p>
-
 
 
                 <p>
 
-                    More than a collection of files and links, this
-                    platform represents a small effort by the
-                    <strong>BSEE 2025–29 batch</strong> to leave behind
-                    something useful for our juniors. We hope that the
-                    resources gathered here will save time, support
-                    preparation, encourage collaboration, and make the
-                    academic experience a little easier for those who
-                    follow.
+                    This platform is more than a collection of links.
+                    It is a small effort by the
+                    <strong>BSEE 2025–29 batch</strong> to create
+                    something useful for the juniors who will follow.
+                    We hope that the resources shared here will help
+                    students save time, prepare better, collaborate
+                    more effectively, and make their academic journey
+                    a little easier.
 
                 </p>
-
 
 
                 <!-- SIGNATURE -->
@@ -337,11 +316,9 @@
                         Built with purpose by
                     </span>
 
-
                     <strong>
                         BSEE 2025–29
                     </strong>
-
 
                     <small>
                         More resources. More semesters. More to come.
@@ -351,7 +328,6 @@
 
 
             </div>
-
 
         </div>
 
@@ -369,19 +345,17 @@
         aria-hidden="true"
     >
 
-
         <div
             class="modal-overlay"
-            data-contact-close
+            data-modal-close="contactModal"
         ></div>
-
 
 
         <div
             class="modal-box"
             role="dialog"
             aria-modal="true"
-            aria-labelledby="contact-title"
+            aria-labelledby="contactTitle"
         >
 
 
@@ -390,15 +364,14 @@
             <button
                 class="modal-close"
                 type="button"
-                aria-label="Close contact"
-                data-contact-close
+                aria-label="Close Contact"
+                data-modal-close="contactModal"
             >
                 ×
             </button>
 
 
-
-            <!-- CONTACT ICON -->
+            <!-- ICON -->
 
             <div class="modal-icon">
 
@@ -424,18 +397,14 @@
             </div>
 
 
+            <!-- TITLE -->
 
-            <!-- CONTACT TITLE -->
-
-            <h2 id="contact-title">
-
+            <h2 id="contactTitle">
                 For Help Contact
-
             </h2>
 
 
-
-            <!-- CONTACTS -->
+            <!-- CONTACT LIST -->
 
             <div class="contact-list">
 
@@ -455,7 +424,6 @@
                 </div>
 
 
-
                 <div class="contact-item">
 
                     <h3>
@@ -469,7 +437,6 @@
                     </a>
 
                 </div>
-
 
 
                 <div class="contact-item">
@@ -489,19 +456,15 @@
 
             </div>
 
-
         </div>
 
     </div>
 
 
 
-    <!-- =====================================================
-         JAVASCRIPT
-    ====================================================== -->
+    <!-- JAVASCRIPT -->
 
     <script src="js/main.js"></script>
-
 
 </body>
 

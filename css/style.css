@@ -1,6 +1,6 @@
 /* =========================================================
    BSEE RESOURCE VAULT
-   LIGHTWEIGHT PREMIUM BLUE UI
+   LIGHTWEIGHT PREMIUM ULTRAMARINE UI
    ========================================================= */
 
 
@@ -18,6 +18,7 @@
 
     --blue: #245cff;
     --blue-light: #3978ff;
+
     --cyan: #42c8ff;
 
     --white: #ffffff;
@@ -44,15 +45,20 @@
    ========================================================= */
 
 * {
+
     margin: 0;
     padding: 0;
 
     box-sizing: border-box;
 }
 
+
 html {
-    scroll-behavior: smooth;
+
+    scroll-behavior:
+        smooth;
 }
+
 
 body {
 
@@ -64,19 +70,23 @@ body {
         Helvetica,
         sans-serif;
 
-    color: var(--white);
+    color:
+        var(--white);
 
     background:
+
         radial-gradient(
             circle at 20% 10%,
             rgba(36,92,255,0.11),
             transparent 28%
         ),
+
         radial-gradient(
             circle at 85% 85%,
             rgba(66,200,255,0.055),
             transparent 28%
         ),
+
         linear-gradient(
             135deg,
             #030817,
@@ -84,46 +94,66 @@ body {
             #040a1d
         );
 
-    overflow-x: hidden;
+    overflow-x:
+        hidden;
 
-    line-height: 1.5;
+    line-height:
+        1.5;
 }
+
 
 body.modal-open {
-    overflow: hidden;
+
+    overflow:
+        hidden;
 }
+
 
 a {
-    color: inherit;
-    text-decoration: none;
+
+    color:
+        inherit;
+
+    text-decoration:
+        none;
 }
 
+
 button {
-    font: inherit;
+
+    font:
+        inherit;
 }
 
 
 /* =========================================================
-   SUBTLE GLOBAL GRID
+   GLOBAL TECHNICAL GRID
    ========================================================= */
 
 body::before {
 
-    content: "";
+    content:
+        "";
 
-    position: fixed;
+    position:
+        fixed;
 
-    inset: 0;
+    inset:
+        0;
 
-    pointer-events: none;
+    pointer-events:
+        none;
 
-    opacity: 0.27;
+    opacity:
+        0.27;
 
     background-image:
+
         linear-gradient(
             rgba(66,200,255,0.028) 1px,
             transparent 1px
         ),
+
         linear-gradient(
             90deg,
             rgba(66,200,255,0.028) 1px,
@@ -142,7 +172,7 @@ body::before {
 .container {
 
     width:
-        min(1080px, 91%);
+        min(1080px,91%);
 
     margin:
         0 auto;
@@ -171,6 +201,7 @@ body::before {
     backdrop-filter:
         blur(12px);
 }
+
 
 .header-inner {
 
@@ -203,6 +234,7 @@ body::before {
     gap:
         10px;
 }
+
 
 .brand-icon {
 
@@ -239,6 +271,7 @@ body::before {
         rgba(36,92,255,0.08);
 }
 
+
 .brand-icon svg {
 
     width:
@@ -251,6 +284,7 @@ body::before {
         currentColor;
 }
 
+
 .brand-name {
 
     display:
@@ -258,6 +292,9 @@ body::before {
 
     flex-direction:
         column;
+
+    color:
+        white;
 
     font-size:
         13px;
@@ -271,6 +308,7 @@ body::before {
     letter-spacing:
         0.9px;
 }
+
 
 .brand-name span {
 
@@ -300,6 +338,7 @@ body::before {
     gap:
         7px;
 }
+
 
 .header-button {
 
@@ -340,6 +379,7 @@ body::before {
     transition:
         var(--transition);
 }
+
 
 .header-button:hover {
 
@@ -382,6 +422,7 @@ body::before {
         center;
 }
 
+
 .technical-grid {
 
     position:
@@ -391,10 +432,12 @@ body::before {
         0;
 
     background-image:
+
         linear-gradient(
             rgba(66,200,255,0.03) 1px,
             transparent 1px
         ),
+
         linear-gradient(
             90deg,
             rgba(66,200,255,0.03) 1px,
@@ -404,6 +447,7 @@ body::before {
     background-size:
         56px 56px;
 }
+
 
 .soft-glow {
 
@@ -419,6 +463,7 @@ body::before {
     pointer-events:
         none;
 }
+
 
 .glow-one {
 
@@ -437,6 +482,7 @@ body::before {
     background:
         rgba(36,92,255,0.08);
 }
+
 
 .glow-two {
 
@@ -478,7 +524,7 @@ body::before {
 
 
 /* =========================================================
-   HERO ICON
+   HERO MARK
    ========================================================= */
 
 .hero-mark {
@@ -522,6 +568,7 @@ body::before {
         0 0 32px
         rgba(36,92,255,0.10);
 }
+
 
 .hero-mark svg {
 
@@ -574,12 +621,13 @@ body::before {
     line-height:
         1;
 
-    letter-spacing:
-        -2.5px;
-
     font-weight:
         900;
+
+    letter-spacing:
+        -2.5px;
 }
+
 
 .hero h1 span {
 
@@ -638,6 +686,9 @@ body::before {
     padding:
         0 25px;
 
+    color:
+        white;
+
     background:
         linear-gradient(
             135deg,
@@ -651,9 +702,6 @@ body::before {
 
     border-radius:
         9px;
-
-    color:
-        white;
 
     font-size:
         12px;
@@ -671,6 +719,7 @@ body::before {
     transition:
         var(--transition);
 }
+
 
 .primary-button svg {
 
@@ -696,6 +745,7 @@ body::before {
         round;
 }
 
+
 .primary-button:hover {
 
     transform:
@@ -708,7 +758,7 @@ body::before {
 
 
 /* =========================================================
-   INTERNAL PAGES
+   INTERNAL PAGE
    ========================================================= */
 
 .page-main {
@@ -716,6 +766,11 @@ body::before {
     padding:
         58px 0 70px;
 }
+
+
+/* =========================================================
+   PAGE HEADING
+   ========================================================= */
 
 .page-heading {
 
@@ -735,6 +790,7 @@ body::before {
         38px;
 }
 
+
 .page-heading h1 {
 
     font-size:
@@ -752,6 +808,7 @@ body::before {
     white-space:
         nowrap;
 }
+
 
 .heading-line {
 
@@ -771,6 +828,7 @@ body::before {
     opacity:
         0.36;
 }
+
 
 .heading-line:last-child {
 
@@ -793,7 +851,7 @@ body::before {
         grid;
 
     grid-template-columns:
-        repeat(4, minmax(0,1fr));
+        repeat(4,minmax(0,1fr));
 
     gap:
         14px;
@@ -845,48 +903,6 @@ body::before {
         var(--transition);
 }
 
-.resource-card::before {
-
-    content:
-        "";
-
-    position:
-        absolute;
-
-    left:
-        -110%;
-
-    top:
-        0;
-
-    width:
-        75%;
-
-    height:
-        100%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(66,200,255,0.055),
-            transparent
-        );
-
-    transform:
-        skewX(-20deg);
-
-    transition:
-        0.65s ease;
-
-    pointer-events:
-        none;
-}
-
-.resource-card:hover::before {
-    left:
-        130%;
-}
 
 .resource-card:hover {
 
@@ -895,13 +911,6 @@ body::before {
 
     border-color:
         var(--border-hover);
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(12,29,69,1),
-            rgba(7,17,40,1)
-        );
 
     box-shadow:
         0 14px 32px
@@ -924,6 +933,7 @@ body::before {
     justify-content:
         space-between;
 }
+
 
 .resource-icon {
 
@@ -959,6 +969,7 @@ body::before {
         var(--transition);
 }
 
+
 .resource-icon svg {
 
     width:
@@ -983,6 +994,7 @@ body::before {
         round;
 }
 
+
 .resource-card:hover .resource-icon {
 
     color:
@@ -990,11 +1002,8 @@ body::before {
 
     background:
         rgba(36,92,255,0.18);
-
-    box-shadow:
-        0 0 18px
-        rgba(66,200,255,0.07);
 }
+
 
 .card-index {
 
@@ -1029,14 +1038,11 @@ body::before {
 
     font-weight:
         850;
-
-    letter-spacing:
-        -0.2px;
 }
 
 
 /* =========================================================
-   RESOURCE CARD ACTION
+   RESOURCE ACTION
    ========================================================= */
 
 .card-action {
@@ -1062,6 +1068,7 @@ body::before {
     letter-spacing:
         1.2px;
 }
+
 
 .card-action svg {
 
@@ -1090,6 +1097,7 @@ body::before {
         var(--transition);
 }
 
+
 .resource-card:hover .card-action svg {
 
     transform:
@@ -1107,7 +1115,7 @@ body::before {
         grid;
 
     grid-template-columns:
-        repeat(4, minmax(0,1fr));
+        repeat(4,minmax(0,1fr));
 
     gap:
         14px;
@@ -1155,9 +1163,9 @@ body::before {
 }
 
 
-/* =========================
+/* =========================================================
    OPEN SEMESTER
-   ========================= */
+   ========================================================= */
 
 .semester-card.open {
 
@@ -1180,6 +1188,7 @@ body::before {
         rgba(36,92,255,0.06);
 }
 
+
 .semester-card.open:hover {
 
     transform:
@@ -1194,9 +1203,9 @@ body::before {
 }
 
 
-/* =========================
+/* =========================================================
    LOCKED SEMESTER
-   ========================= */
+   ========================================================= */
 
 .semester-card.locked {
 
@@ -1260,6 +1269,7 @@ body::before {
         10px;
 }
 
+
 .semester-icon svg {
 
     width:
@@ -1283,6 +1293,7 @@ body::before {
     stroke-linejoin:
         round;
 }
+
 
 .locked .semester-icon {
 
@@ -1312,6 +1323,7 @@ body::before {
     font-weight:
         900;
 }
+
 
 .semester-card h2 {
 
@@ -1349,10 +1361,6 @@ body::before {
 }
 
 
-/* =========================================================
-   LOCKED STATUS
-   ========================================================= */
-
 .semester-status {
 
     margin-top:
@@ -1370,6 +1378,7 @@ body::before {
     letter-spacing:
         1.3px;
 }
+
 
 .coming-soon {
 
@@ -1400,7 +1409,7 @@ body::before {
         grid;
 
     grid-template-columns:
-        repeat(4, minmax(0,1fr));
+        repeat(4,minmax(0,1fr));
 
     gap:
         14px;
@@ -1458,6 +1467,7 @@ body::before {
         var(--transition);
 }
 
+
 .batch-card:hover {
 
     transform:
@@ -1513,6 +1523,7 @@ body::before {
         var(--transition);
 }
 
+
 .drive-icon svg {
 
     width:
@@ -1537,6 +1548,7 @@ body::before {
         round;
 }
 
+
 .batch-card:hover .drive-icon {
 
     color:
@@ -1544,10 +1556,6 @@ body::before {
 
     transform:
         scale(1.05);
-
-    box-shadow:
-        0 0 18px
-        rgba(66,200,255,0.06);
 }
 
 
@@ -1566,6 +1574,7 @@ body::before {
     font-weight:
         900;
 }
+
 
 .drive-label {
 
@@ -1587,7 +1596,7 @@ body::before {
 
 
 /* =========================================================
-   MODAL
+   MODALS
    ========================================================= */
 
 .modal {
@@ -1614,10 +1623,13 @@ body::before {
         20px;
 }
 
+
 .modal.show {
+
     display:
         flex;
 }
+
 
 .modal-overlay {
 
@@ -1633,6 +1645,7 @@ body::before {
     backdrop-filter:
         blur(6px);
 }
+
 
 .modal-box {
 
@@ -1667,75 +1680,6 @@ body::before {
         rgba(0,0,0,0.45);
 }
 
-.modal-icon {
-
-    width:
-        48px;
-
-    height:
-        48px;
-
-    margin:
-        0 auto 13px;
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    color:
-        var(--cyan);
-
-    background:
-        rgba(36,92,255,0.08);
-
-    border:
-        1px solid
-        rgba(66,200,255,0.18);
-
-    border-radius:
-        12px;
-}
-
-.modal-icon svg {
-
-    width:
-        24px;
-
-    height:
-        24px;
-
-    fill:
-        none;
-
-    stroke:
-        currentColor;
-
-    stroke-width:
-        1.6;
-
-    stroke-linecap:
-        round;
-
-    stroke-linejoin:
-        round;
-}
-
-.modal-box h2 {
-
-    margin-bottom:
-        20px;
-
-    text-align:
-        center;
-
-    font-size:
-        20px;
-}
 
 .modal-close {
 
@@ -1785,6 +1729,7 @@ body::before {
         var(--transition);
 }
 
+
 .modal-close:hover {
 
     color:
@@ -1792,6 +1737,83 @@ body::before {
 
     background:
         rgba(255,255,255,0.06);
+}
+
+
+/* =========================================================
+   MODAL ICON
+   ========================================================= */
+
+.modal-icon {
+
+    width:
+        48px;
+
+    height:
+        48px;
+
+    margin:
+        0 auto 13px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    color:
+        var(--cyan);
+
+    background:
+        rgba(36,92,255,0.08);
+
+    border:
+        1px solid
+        rgba(66,200,255,0.18);
+
+    border-radius:
+        12px;
+}
+
+
+.modal-icon svg {
+
+    width:
+        24px;
+
+    height:
+        24px;
+
+    fill:
+        none;
+
+    stroke:
+        currentColor;
+
+    stroke-width:
+        1.6;
+
+    stroke-linecap:
+        round;
+
+    stroke-linejoin:
+        round;
+}
+
+
+.modal-box h2 {
+
+    margin-bottom:
+        20px;
+
+    text-align:
+        center;
+
+    font-size:
+        20px;
 }
 
 
@@ -1812,10 +1834,13 @@ body::before {
         rgba(255,255,255,0.06);
 }
 
+
 .contact-item:first-child {
+
     border-top:
         none;
 }
+
 
 .contact-item h3 {
 
@@ -1825,6 +1850,7 @@ body::before {
     font-size:
         14px;
 }
+
 
 .contact-item a {
 
@@ -1838,9 +1864,142 @@ body::before {
         var(--transition);
 }
 
+
 .contact-item a:hover {
+
     color:
         var(--cyan);
+}
+
+
+/* =========================================================
+   ABOUT MODAL
+   ========================================================= */
+
+.about-box {
+
+    width:
+        min(520px,100%);
+
+    max-height:
+        86vh;
+
+    overflow-y:
+        auto;
+
+    padding:
+        32px;
+}
+
+
+.about-text {
+
+    text-align:
+        left;
+}
+
+
+.about-text p {
+
+    margin-bottom:
+        17px;
+
+    color:
+        var(--muted);
+
+    font-size:
+        12px;
+
+    line-height:
+        1.78;
+}
+
+
+.about-text p strong {
+
+    color:
+        var(--text);
+
+    font-weight:
+        800;
+}
+
+
+/* =========================================================
+   ABOUT SIGNATURE
+   ========================================================= */
+
+.about-signature {
+
+    margin-top:
+        21px;
+
+    padding-top:
+        18px;
+
+    text-align:
+        center;
+
+    border-top:
+        1px solid
+        rgba(255,255,255,0.07);
+}
+
+
+.about-signature span {
+
+    display:
+        block;
+
+    margin-bottom:
+        4px;
+
+    color:
+        var(--muted);
+
+    font-size:
+        10px;
+
+    letter-spacing:
+        0.4px;
+}
+
+
+.about-signature strong {
+
+    display:
+        block;
+
+    color:
+        var(--cyan);
+
+    font-size:
+        15px;
+
+    font-weight:
+        900;
+
+    letter-spacing:
+        1px;
+}
+
+
+.about-signature small {
+
+    display:
+        block;
+
+    margin-top:
+        6px;
+
+    color:
+        #62728f;
+
+    font-size:
+        9px;
+
+    letter-spacing:
+        0.6px;
 }
 
 
@@ -1871,7 +2030,7 @@ button:focus-visible {
     .batch-grid {
 
         grid-template-columns:
-            repeat(2, minmax(0,1fr));
+            repeat(2,minmax(0,1fr));
     }
 
 }
@@ -1884,18 +2043,21 @@ button:focus-visible {
 @media (max-width: 600px) {
 
     .container {
+
         width:
             90%;
     }
 
 
     .header-inner {
+
         min-height:
             62px;
     }
 
 
     .brand-icon {
+
         width:
             31px;
 
@@ -1905,12 +2067,14 @@ button:focus-visible {
 
 
     .brand-name {
+
         font-size:
             10px;
     }
 
 
     .brand-name span {
+
         font-size:
             8px;
     }
@@ -1937,6 +2101,7 @@ button:focus-visible {
 
 
     .hero-content {
+
         padding:
             45px 0;
     }
@@ -1978,7 +2143,7 @@ button:focus-visible {
     .hero h1 {
 
         font-size:
-            clamp(36px, 11vw, 52px);
+            clamp(36px,11vw,52px);
 
         letter-spacing:
             -1.7px;
@@ -2023,6 +2188,7 @@ button:focus-visible {
 
 
     .heading-line {
+
         width:
             25px;
     }
@@ -2040,7 +2206,7 @@ button:focus-visible {
     }
 
 
-    /* COMPACT MOBILE RESOURCE TILE */
+    /* RESOURCE TILES */
 
     .resource-card {
 
@@ -2052,13 +2218,6 @@ button:focus-visible {
 
         border-radius:
             12px;
-    }
-
-
-    .resource-card-top {
-
-        align-items:
-            center;
     }
 
 
@@ -2082,12 +2241,6 @@ button:focus-visible {
 
         height:
             18px;
-    }
-
-
-    .card-index {
-        font-size:
-            8px;
     }
 
 
@@ -2118,7 +2271,7 @@ button:focus-visible {
     }
 
 
-    /* COMPACT MOBILE SEMESTER */
+    /* SEMESTER TILES */
 
     .semester-card {
 
@@ -2140,9 +2293,6 @@ button:focus-visible {
 
         margin-bottom:
             5px;
-
-        border-radius:
-            8px;
     }
 
 
@@ -2157,6 +2307,7 @@ button:focus-visible {
 
 
     .semester-number {
+
         font-size:
             21px;
     }
@@ -2190,7 +2341,7 @@ button:focus-visible {
     }
 
 
-    /* COMPACT MOBILE SENIOR DRIVE */
+    /* SENIOR DRIVE TILES */
 
     .batch-card {
 
@@ -2245,10 +2396,35 @@ button:focus-visible {
     }
 
 
-    .modal-box {
+    /* ABOUT */
+
+    .about-box {
+
+        width:
+            min(100%, 520px);
+
+        max-height:
+            88vh;
 
         padding:
-            27px 18px;
+            28px 20px;
+    }
+
+
+    .about-text p {
+
+        font-size:
+            11px;
+
+        line-height:
+            1.72;
+    }
+
+
+    .about-signature strong {
+
+        font-size:
+            14px;
     }
 
 }
